@@ -1,0 +1,212 @@
+<h1>1&#x3001;&#x80CC;&#x666F;</h1>
+<p>a&#x3001;&#x641C;&#x72D7;&#x4E5F;&#x53D1;&#x5E03;&#x4E86;&#x81EA;&#x5DF1;&#x7684;&#x4EBA;&#x5DE5;&#x667A;&#x80FD; api&#xFF0C;&#x5305;&#x62EC;&#x8EAB;&#x4EFD;&#x8BC1;ocr&#x3001;&#x540D;&#x7247;ocr&#x3001;&#x6587;&#x672C;&#x7FFB;&#x8BD1;&#x7B49;API&#xFF0C;&#x521D;&#x8BD5;&#x611F;&#x89C9;&#x51C6;&#x786E;&#x7387;&#x4E00;&#x822C;&#x822C;&#x3002;</p>
+<p>b&#x3001;&#x57FA;&#x4E8E;python3&#x3002;</p>
+<p>c&#x3001;&#x4E5F;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x7B7E;&#x540D;&#x751F;&#x6210;&#x8FD9;&#x5757;&#xFF0C;&#x6709;&#x4E86;&#x9E45;&#x5382;&#x7684;&#x5E95;&#x5B50;&#xFF0C;&#x76F8;&#x5BF9;&#x5199;&#x8D77;&#x6765;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#x3002;</p>
+<p>d&#x3001;&#x4E0D;&#x8FC7;Sougou&#x660E;&#x663E;&#x5728;&#x63A5;&#x53E3;&#x6807;&#x51C6;&#x5316;&#x8FD9;&#x5757;&#x660E;&#x663E;&#x4E0D;&#x5982;&#x9E45;&#x5382;&#xFF0C;&#x4E0D;&#x540C;api&#x5E94;&#x7B54;&#x5305;&#x7684;&#x4E3B;&#x4F53;&#x7ED3;&#x6784;&#x7ADF;&#x7136;&#x4E0D;&#x4E00;&#x81F4;&#xFF0C;&#x6240;&#x4EE5;&#x5B9E;&#x65BD;&#x4E5F;&#x53EA;&#x505A;&#x4E86;&#x7B80;&#x5355;&#x7684;&#x7ED3;&#x6784;&#x5316;&#x2026;&#x2026;</p>
+<p>&#xA0;</p>
+<h1>2&#x3001;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;</h1>
+<p>&#x76F4;&#x63A5;&#x653E;&#x4EE3;&#x7801;&#x5427;&#xFF0C;github&#x4E0A;&#x4E5F;&#x6709;&#xFF1A; <a href="https://github.com/jdstkxx/PySougouAI" target="_blank">https://github.com/jdstkxx/PySougouAI</a>&#xA0;&#x2026;&#x2026;</p>
+<p><span class="final-path">1&#x3001;sogouai-example.py</span></p>
+<div class="cnblogs_code">
+<pre><span style="color: #008000;">#</span><span style="color: #008000;"> -*- coding: utf-8 -*-</span>
+
+<span style="color: #800000;">&apos;&apos;&apos;</span><span style="color: #800000;">
+create by : joshua zou
+create date : 2018.4.9
+Purpose: check sougou ai api
+</span><span style="color: #800000;">&apos;&apos;&apos;</span>
+
+<span style="color: #0000ff;">import</span><span style="color: #000000;"> glob,os
+</span><span style="color: #0000ff;">from</span> SougouAPIMsg <span style="color: #0000ff;">import</span> *
+
+<span style="color: #008000;">#</span><span style="color: #008000;">&#x6539;&#x6210;&#x4F60;&#x81EA;&#x5DF1;&#x641C;&#x72D7;AI&#x7684;APPID&#x3001;APPKEY&#x3001;SecretKey</span>
+AppID = <span style="color: #800000;">&apos;</span><span style="color: #800000;">0000</span><span style="color: #800000;">&apos;</span><span style="color: #000000;">
+ApiKey </span>= <span style="color: #800000;">&apos;</span><span style="color: #800000;">*********</span><span style="color: #800000;">&apos;</span><span style="color: #000000;">
+SecretKey</span>= <span style="color: #800000;">&apos;</span><span style="color: #800000;">0PLvS-AHShmq**************</span><span style="color: #800000;">&apos;</span>
+
+<span style="color: #0000ff;">if</span> <span style="color: #800080;">__name__</span> == <span style="color: #800000;">&quot;</span><span style="color: #800000;">__main__</span><span style="color: #800000;">&quot;</span><span style="color: #000000;">:
+    sg </span>=<span style="color: #000000;"> SougouAPIMsg(AppID,ApiKey,SecretKey)
+    </span><span style="color: #0000ff;">for</span> file <span style="color: #0000ff;">in</span> glob.glob(<span style="color: #800000;">&apos;</span><span style="color: #800000;">D:\python\*.jpg</span><span style="color: #800000;">&apos;</span><span style="color: #000000;">):
+        filename</span>=os.path.split(file)[1].split(<span style="color: #800000;">&apos;</span><span style="color: #800000;">.</span><span style="color: #800000;">&apos;</span><span style="color: #000000;">)[0]
+        </span><span style="color: #008000;">#</span><span style="color: #008000;">&#x8C03;&#x7528;ocr&#x8BC6;&#x522B;</span>
+        apiname = <span style="color: #800000;">&apos;</span><span style="color: #800000;">ocr</span><span style="color: #800000;">&apos;</span><span style="color: #000000;">
+        rest </span>=<span style="color: #000000;">sg.apiSougouOcr(apiname,file)
+        </span><span style="color: #008000;">#</span><span style="color: #008000;">&#x8C03;&#x7528;&#x8EAB;&#x4EFD;&#x8BC1;&#x8BC6;&#x522B;</span>
+        <span style="color: #008000;">#</span><span style="color: #008000;">rest =sg.apiSougouOcr(&apos;idcard&apos;,file)</span>
+<span style="color: #000000;">        
+
+        js</span>=<span style="color: #000000;"> rest.json()
+        retext </span>=<span style="color: #800000;">&quot;&quot;</span>
+        <span style="color: #0000ff;">if</span> apiname==<span style="color: #800000;">&apos;</span><span style="color: #800000;">ocr</span><span style="color: #800000;">&apos;</span><span style="color: #000000;">:
+            </span><span style="color: #008000;">#</span><span style="color: #008000;">&#x6587;&#x5B57;&#x8BC6;&#x522B;&#xFF0C;rest&#x5E94;&#x7B54;&#x5305;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;</span>
+            <span style="color: #008000;">#</span><span style="color: #008000;">&#x6210;&#x529F;  {&quot;result&quot;:[{&quot;content&quot;:&quot;01245177\n&quot;,&quot;frame&quot;:[&quot;0,0&quot;,&quot;207,0&quot;,&quot;207,59&quot;,&quot;0,59&quot;]}],&quot;success&quot;:1}</span>
+            <span style="color: #008000;">#</span><span style="color: #008000;">&#x5931;&#x8D25;  {&quot;success&quot;:0}            </span>
+            <span style="color: #0000ff;">if</span> js[<span style="color: #800000;">&apos;</span><span style="color: #800000;">success</span><span style="color: #800000;">&apos;</span>]==1<span style="color: #000000;"> :
+                retext </span>= js[<span style="color: #800000;">&apos;</span><span style="color: #800000;">result</span><span style="color: #800000;">&apos;</span>][0][<span style="color: #800000;">&apos;</span><span style="color: #800000;">content</span><span style="color: #800000;">&apos;</span><span style="color: #000000;">].strip()                 
+        </span><span style="color: #0000ff;">elif</span> apiname == <span style="color: #800000;">&apos;</span><span style="color: #800000;">idcard</span><span style="color: #800000;">&apos;</span><span style="color: #000000;">:
+            </span><span style="color: #008000;">#</span><span style="color: #008000;">&#x8EAB;&#x4EFD;&#x8BC1;&#x8BC6;&#x522B;&#x5E94;&#x7B54;&#x5305;&#xFF0C;&#x903C;&#x6B7B;&#x5F3A;&#x8FEB;&#x75C7;&#x554A;&#xFF0C;&#x8BF7;&#x6C42;&#x7ED3;&#x6784;&#xFF0C;&#x5E94;&#x7B54;&#x7ED3;&#x6784;&#x90FD;&#x4E0D;&#x4E00;&#x6837;</span>
+            <span style="color: #800000;">&apos;&apos;&apos;</span><span style="color: #800000;">
+            {
+            &quot;result&quot;: {
+            &quot;&#x4F4F;&#x5740;&quot;: &quot;xxxxxx&quot;,
+            &quot;&#x516C;&#x6C11;&#x8EAB;&#x4EFD;&#x53F7;&#x7801;&quot;: &quot;11001xxx30&quot;,
+            &quot;&#x51FA;&#x751F;&quot;: &quot;19900101&quot;,
+            &quot;&#x59D3;&#x540D;&quot;: &quot;xxXX&quot;,
+            &quot;&#x6027;&#x522B;&quot;: &quot;X&quot;,
+            &quot;&#x6C11;&#x65CF;&quot;: &quot;xxx&quot;
+            },
+            &quot;status&quot;: 0,
+            &quot;statusText&quot;: &quot;Success&quot;
+            }
+            </span><span style="color: #800000;">&apos;&apos;&apos;</span>
+            <span style="color: #0000ff;">if</span> js[<span style="color: #800000;">&apos;</span><span style="color: #800000;">status</span><span style="color: #800000;">&apos;</span>]==<span style="color: #000000;">0 :
+                retext </span>= js[<span style="color: #800000;">&apos;</span><span style="color: #800000;">result</span><span style="color: #800000;">&apos;</span>][<span style="color: #800000;">&apos;</span><span style="color: #800000;">&#x516C;&#x6C11;&#x8EAB;&#x4EFD;&#x53F7;&#x7801;</span><span style="color: #800000;">&apos;</span><span style="color: #000000;">].strip()            
+        </span><span style="color: #0000ff;">print</span>(filename,retext)</pre>
+</div>
+<p>&#xA0;</p>
+<p>2&#x3001;<span class="final-path">SougouAPI.py</span></p>
+<div class="cnblogs_code">
+<pre><span style="color: #008000;">#</span><span style="color: #008000;"> -*- coding: utf-8 -*-</span><span style="color: #008000;">
+#</span><span style="color: #008000;"> &#x641C;&#x72D7;API&#x5B57;&#x5178;</span>
+<span style="color: #000000;">
+SougouAPI</span>=<span style="color: #000000;">{
+    </span><span style="color: #008000;">#</span><span style="color: #008000;">&#x57FA;&#x672C;&#x6587;&#x672C;&#x5206;&#x6790;API</span>
+    <span style="color: #800000;">&quot;</span><span style="color: #800000;">ocr</span><span style="color: #800000;">&quot;</span><span style="color: #000000;">:    {
+        </span><span style="color: #800000;">&apos;</span><span style="color: #800000;">APINAME</span><span style="color: #800000;">&apos;</span>:<span style="color: #800000;">&apos;</span><span style="color: #800000;">&#x56FE;&#x50CF;&#x8BC6;&#x522B;</span><span style="color: #800000;">&apos;</span>, <span style="color: #008000;">#</span><span style="color: #008000;">API&#x4E2D;&#x6587;&#x7B80;&#x79F0;</span>
+        <span style="color: #800000;">&apos;</span><span style="color: #800000;">APIDESC</span><span style="color: #800000;">&apos;</span>: <span style="color: #800000;">&apos;</span><span style="color: #800000;">&#x8BC6;&#x522B;&#x56FE;&#x50CF;&#x4E2D;&#x7684;&#x6587;&#x5B57;</span><span style="color: #800000;">&apos;</span>, <span style="color: #008000;">#</span><span style="color: #008000;">API&#x63CF;&#x8FF0;</span>
+        <span style="color: #800000;">&apos;</span><span style="color: #800000;">APIURL</span><span style="color: #800000;">&apos;</span>: <span style="color: #800000;">&apos;</span><span style="color: #800000;">http://api.ai.sogou.com/pub/ocr</span><span style="color: #800000;">&apos;</span> <span style="color: #008000;">#</span><span style="color: #008000;">API&#x8BF7;&#x6C42;URL</span>
+<span style="color: #000000;">    },
+    </span><span style="color: #800000;">&quot;</span><span style="color: #800000;">idcard</span><span style="color: #800000;">&quot;</span><span style="color: #000000;">:{
+        </span><span style="color: #800000;">&apos;</span><span style="color: #800000;">APINAME</span><span style="color: #800000;">&apos;</span>:<span style="color: #800000;">&apos;</span><span style="color: #800000;">&#x8EAB;&#x4EFD;&#x8BC1;&#x8BC6;&#x522B;</span><span style="color: #800000;">&apos;</span>, <span style="color: #008000;">#</span><span style="color: #008000;">API&#x4E2D;&#x6587;&#x7B80;&#x79F0;</span>
+        <span style="color: #800000;">&apos;</span><span style="color: #800000;">APIDESC</span><span style="color: #800000;">&apos;</span>: <span style="color: #800000;">&apos;</span><span style="color: #800000;">&#x8EAB;&#x4EFD;&#x8BC1;&#x8BC6;&#x522B;</span><span style="color: #800000;">&apos;</span>, <span style="color: #008000;">#</span><span style="color: #008000;">API&#x63CF;&#x8FF0;</span>
+        <span style="color: #800000;">&apos;</span><span style="color: #800000;">APIURL</span><span style="color: #800000;">&apos;</span>: <span style="color: #800000;">&apos;</span><span style="color: #800000;">http://api.ai.sogou.com/pub/ocr/idcard</span><span style="color: #800000;">&apos;</span> <span style="color: #008000;">#</span><span style="color: #008000;">API&#x8BF7;&#x6C42;URL</span>
+<span style="color: #000000;">    },
+    
+}</span></pre>
+</div>
+<p>3&#x3001;<span class="final-path">SougouAPIMsg.py</span></p>
+<div class="cnblogs_code">
+<pre><span style="color: #008000;">#</span><span style="color: #008000;"> -*- coding: utf-8 -*-</span>
+
+<span style="color: #800000;">&apos;&apos;&apos;</span><span style="color: #800000;">
+create by : joshua zou
+create date : 2018.4.9
+Purpose: check sougou ai api
+</span><span style="color: #800000;">&apos;&apos;&apos;</span>
+
+<span style="color: #0000ff;">import</span><span style="color: #000000;"> requests
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> base64
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> hashlib
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> hmac
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> time
+</span><span style="color: #0000ff;">from</span> urllib <span style="color: #0000ff;">import</span><span style="color: #000000;"> parse
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> json
+</span><span style="color: #0000ff;">from</span> SougouAPI <span style="color: #0000ff;">import</span> *
+
+<span style="color: #0000ff;">class</span><span style="color: #000000;"> SougouAPIMsg(object):
+    </span><span style="color: #0000ff;">def</span> <span style="color: #800080;">__init__</span>(self,AppID=None,ApiKey=None,SecretKey=<span style="color: #000000;">None):
+        </span><span style="color: #0000ff;">if</span> <span style="color: #0000ff;">not</span> AppID: AppID = <span style="color: #800000;">&apos;</span><span style="color: #800000;">88888</span><span style="color: #800000;">&apos;</span>
+        <span style="color: #0000ff;">if</span> <span style="color: #0000ff;">not</span> ApiKey: ApiKey = <span style="color: #800000;">&apos;</span><span style="color: #800000;">5ADwS88888888Dtr6QG2</span><span style="color: #800000;">&apos;</span>
+        <span style="color: #0000ff;">if</span> <span style="color: #0000ff;">not</span> SecretKey: SecretKey= <span style="color: #800000;">&apos;</span><span style="color: #800000;">0PLvS-AH8888888889n6NF6fVVTt7m</span><span style="color: #800000;">&apos;</span><span style="color: #000000;">
+        self.</span><span style="color: #800080;">__app_id</span>=<span style="color: #000000;"> AppID 
+        self.</span><span style="color: #800080;">__app_key</span>=<span style="color: #000000;"> ApiKey 
+        self.</span><span style="color: #800080;">__app_secret</span>=<span style="color: #000000;"> SecretKey 
+
+    
+    </span><span style="color: #0000ff;">def</span><span style="color: #000000;"> get_time_stamp(self):
+        </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> str(int(time.time()))
+    
+    </span><span style="color: #800000;">&apos;&apos;&apos;</span><span style="color: #800000;">
+    1&#x3001;&#x5E94;&#x7528;&#x76F8;&#x5173;&#x524D;&#x7F00; {AuthPrefix}
+    {AuthPrefix}=sac-auth-v1/{accessKey}/{secondsSinceEpoch}/{expirationPeriodInSeconds}
+    2&#x3001;&#x8BF7;&#x6C42;&#x76F8;&#x5173;&#x6570;&#x636E; {Data}        
+    {Data}={REQUEST_METHOD} + &quot;\n&quot; + {HOST} + &quot;\n&quot; + {URI} + &quot;\n&quot; + {SORTED_QUERY_STRING}
+    &#x5176;&#x4E2D;&#xFF0C;REQUEST_METHOD &#x4E3A;&#x8BF7;&#x6C42;&#x4F7F;&#x7528;&#x7684; HTTP &#x65B9;&#x6CD5;, &#x5982;: GET|POST|PUT|DELETE
+    HOST &#x4E3A;&#x670D;&#x52A1;&#x4F7F;&#x7528;&#x7684;&#x57DF;&#x540D;, &#x5982;: api.ai.sogou.com
+    URI &#x4E3A;&#x8BF7;&#x6C42;&#x7684;&#x670D;&#x52A1;&#x8DEF;&#x5F84;, &#x5982;: /speech/asr
+    SORTED_QUERY_STRING &#x628A; URL &#x4E2D;&#x7684; Query String&#xFF08;&#x5373; URL &#x4E2D; &#x201C;?&#x201D; &#x540E;&#x9762;&#x7684; &#x201C;k1=v1&amp;k2=v2&#x201D; &#x5B57;&#x7B26;&#x4E32;&#xFF09;&#x8FDB;&#x884C;&#x7F16;&#x7801;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x3002;        
+    &#x7F16;&#x7801;&#x65B9;&#x6CD5;&#x4E3A;&#xFF1A;
+    &#x5C06; Query String &#x6839;&#x636E; &amp; &#x62C6;&#x5F00;&#x6210;&#x82E5;&#x5E72;&#x9879;&#xFF0C;&#x5BF9;&#x6BCF;&#x4E00;&#x9879;&#x8F6C;&#x6362;&#x4E3A; UriEncode(key) + &quot;=&quot; + UriEncode(value) &#x7684;&#x5F62;&#x5F0F;, &#x5176;&#x4E2D; value &#x53EF;&#x4EE5;&#x662F;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;
+    &#x5C06;&#x4E0A;&#x9762;&#x8F6C;&#x6362;&#x540E;&#x7684;&#x6240;&#x6709;&#x5B57;&#x7B26;&#x4E32;&#x6309;&#x7167;&#x5B57;&#x5178;&#x987A;&#x5E8F;&#x6392;&#x5E8F;&#x3002;
+    &#x5C06;&#x6392;&#x5E8F;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x6309;&#x987A;&#x5E8F;&#x7528; &amp; &#x7B26;&#x53F7;&#x94FE;&#x63A5;&#x8D77;&#x6765;&#x3002;
+    3&#x3001;&#x751F;&#x6210;&#x7B7E;&#x540D; {Signature}        
+     {Signature}=HMAC-SHA256-BASE64({secretKey}, {AuthPrefix} + &quot;\n&quot; + {Data})
+    4&#xFFFD;&#xFFFD;&#x751F;&#x6210;&#x8BA4;&#x8BC1;&#x4FE1;&#x606F;, &#x901A;&#x8FC7; Authorization header &#x4F20;&#x9012;        
+     Authorization: {AuthPrefix}/{Signature}
+     Example:
+     1\&#x5E94;&#x7528; accessKey/secretKey &#x5206;&#x522B;&#x4E3A; bTkALtTB9x6GAxmFi9wetAGH / PMROwlieALT36qfdGClVz2iH4Sv8xZxe
+       POST &#x65B9;&#x5F0F;&#x8BBF;&#x95EE; http://api.ai.sogou.com/speech/asr &#x63A5;&#x53E3;
+       GET &#x53C2;&#x6570;&#x4E3A; type=gbk&amp;idx=1&amp;starttime=1491810516
+       &#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x65F6;&#x95F4;&#x4E3A; 1491810516
+     2\&#x8BA1;&#x7B97;&#x8FC7;&#x7A0B;         
+       {AuthPrefix}=&quot;sac-auth-v1/bTkALtTB9x6GAxmFi9wetAGH/1491810516/3600&quot;
+       {Data}=&quot;POST\napi.ai.sogou.com\n/speech/asr\nidx=1&amp;starttime=1491810516&amp;type=gbk&quot;
+       {Signature}=HMAC-SHA256-BASE64(&quot;PMROwlieALT36qfdGClVz2iH4Sv8xZxe&quot;, {AuthPrefix} + &quot;\n&quot; + {Data})=&quot;vuVEkzcnUeFv8FxeWS50c7S0HaYH1QKgtIV5xrxDY/s=&quot;
+     3\&#x6700;&#x7EC8;&#x751F;&#x6210;&#x7684; header &#x4E3A;
+       Authorization: sac-auth-v1/bTkALtTB9x6GAxmFi9wetAGH/1491810516/3600/vuVEkzcnUeFv8FxeWS50c7S0HaYH1QKgtIV5xrxDY/s=
+    </span><span style="color: #800000;">&apos;&apos;&apos;</span>
+    <span style="color: #0000ff;">def</span><span style="color: #000000;"> get_auth_sign_str(self,url,method):
+        res</span>=<span style="color: #000000;"> parse.urlparse(url)
+        host</span>=<span style="color: #000000;"> res.netloc
+        uri </span>=<span style="color: #000000;"> res.path
+        query</span>=<span style="color: #000000;"> res.query
+               
+        
+        </span><span style="color: #008000;">#</span><span style="color: #008000;">1&#x751F;&#x6210;&#x524D;&#x7F6E;&#x5B57;&#x7B26;&#x4E32;</span>
+        authprefix= <span style="color: #800000;">&apos;</span><span style="color: #800000;">sac-auth-v1/%s/%s/%s</span><span style="color: #800000;">&apos;</span> %(self.<span style="color: #800080;">__app_key</span>,self.get_time_stamp(),3600<span style="color: #000000;">)
+        </span><span style="color: #008000;">#</span><span style="color: #008000;">2&#x751F;&#x6210;data</span>
+        query=dict( (k, v <span style="color: #0000ff;">if</span> len(v)&gt;1 <span style="color: #0000ff;">else</span><span style="color: #000000;"> v[0] )
+                        </span><span style="color: #0000ff;">for</span> k, v <span style="color: #0000ff;">in</span><span style="color: #000000;"> parse.parse_qs(res.query).items() )         
+        sort_dict</span>= sorted(query.items(), key=<span style="color: #0000ff;">lambda</span> item:item[0], reverse =<span style="color: #000000;"> False)
+        sortquerystr</span>=<span style="color: #000000;"> parse.urlencode(sort_dict)
+        data</span>= <span style="color: #800000;">&apos;</span><span style="color: #800000;">%s\n%s\n%s\n%s</span><span style="color: #800000;">&apos;</span> %<span style="color: #000000;">(method,host,uri,sortquerystr)
+        </span><span style="color: #008000;">#</span><span style="color: #008000;">3&#x751F;&#x6210;signstr</span>
+        signstr =<span style="color: #800000;">&apos;</span><span style="color: #800000;">%s\n%s</span><span style="color: #800000;">&apos;</span> %<span style="color: #000000;">(authprefix,data)
+        </span><span style="color: #008000;">#</span><span style="color: #008000;">&#x8C03;&#x7528;hamc.sha256</span>
+        shastr =hmac.new(self.<span style="color: #800080;">__app_secret</span>.encode(), signstr.encode(), digestmod=<span style="color: #000000;">hashlib.sha256).digest()
+        </span><span style="color: #008000;">#</span><span style="color: #008000;">base64&#x7F16;&#x7801;&#xFF0C;&#x8FD8;&#x539F;&#x6210;&#x5B57;&#x7B26;&#x4E32;</span>
+        signature =<span style="color: #000000;"> base64.b64encode(shastr).decode()
+        
+        </span><span style="color: #008000;">#</span><span style="color: #008000;">4&#x7EC4;&#x5408;&#x6210;&#x6700;&#x7EC8;&#x7684;&#x6388;&#x6743;&#x7801;</span>
+        authstr= <span style="color: #800000;">&apos;</span><span style="color: #800000;">%s/%s</span><span style="color: #800000;">&apos;</span> %<span style="color: #000000;">(authprefix,signature)
+        </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> authstr
+
+    </span><span style="color: #800000;">&apos;&apos;&apos;</span><span style="color: #800000;">
+    $file = &quot;OCR-test03.jpg&quot;;
+    $url = &quot;http://api.ai.sogou.com/pub/ocr&quot;;
+    
+    $hdr = array(
+        &quot;Content-Type: multipart/form-data&quot;,
+        &quot;Authorization: &quot;.sign($ak, $sk, $url, &quot;POST&quot;)
+    ); // cURL headers for file uploading
+    
+    $postfields = array(
+        &quot;pic&quot; =&gt; curl_file_create($file,&apos;image/jpeg&apos;,&apos;a_b_c.jpg&apos;),
+    );
+    
+    $ch = curl_init();
+    $options = array(
+        CURLOPT_URL =&gt; $url,
+        CURLOPT_HEADER =&gt; false,
+        CURLOPT_POST =&gt; 1,
+        CURLOPT_HTTPHEADER =&gt; $hdr,
+        CURLOPT_POSTFIELDS =&gt; $postfields,
+        CURLOPT_RETURNTRANSFER =&gt; true
+    );
+    </span><span style="color: #800000;">&apos;&apos;&apos;</span>
+    <span style="color: #0000ff;">def</span><span style="color: #000000;"> apiSougouOcr(self,apiname,picfilename):
+        url </span>= SougouAPI[apiname][<span style="color: #800000;">&apos;</span><span style="color: #800000;">APIURL</span><span style="color: #800000;">&apos;</span><span style="color: #000000;">]
+        name </span>= SougouAPI[apiname][<span style="color: #800000;">&apos;</span><span style="color: #800000;">APINAME</span><span style="color: #800000;">&apos;</span><span style="color: #000000;">]
+        desc</span>= SougouAPI[apiname][<span style="color: #800000;">&apos;</span><span style="color: #800000;">APIDESC</span><span style="color: #800000;">&apos;</span><span style="color: #000000;">]
+        
+        authstr</span>=self.get_auth_sign_str(url, method=<span style="color: #800000;">&apos;</span><span style="color: #800000;">POST</span><span style="color: #800000;">&apos;</span><span style="color: #000000;">)
+        header</span>={ <span style="color: #800000;">&quot;</span><span style="color: #800000;">Authorization</span><span style="color: #800000;">&quot;</span><span style="color: #000000;">: authstr }
+        
+        picfile</span>= {<span style="color: #800000;">&apos;</span><span style="color: #800000;">pic</span><span style="color: #800000;">&apos;</span>:open(picfilename,<span style="color: #800000;">&apos;</span><span style="color: #800000;">rb</span><span style="color: #800000;">&apos;</span><span style="color: #000000;">)}
+        
+        resp </span>= requests.post(url,headers=header,files=<span style="color: #000000;">picfile)           
+        </span><span style="color: #008000;">#</span><span style="color: #008000;">print (resp.text)</span></pre>
+</div>
+<p>&#xA0;</p>
+<p>--&#xA0;&#x4EE5;&#x4E0A;--</p>
+<p>&#xA0;</p>

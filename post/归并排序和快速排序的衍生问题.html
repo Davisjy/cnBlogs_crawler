@@ -1,0 +1,205 @@
+<div id="preview-column" class="pull-right">
+<div id="wmd-panel-preview" class="wmd-panel-preview preview-container">
+<div id="wmd-preview" class="wmd-preview" data-medium-element="true">
+<p data-anchor-id="dauc">&#x524D;&#x9762;&#x4E24;&#x7BC7;&#x603B;&#x7ED3;&#x4E86;&#x5E38;&#x89C1;&#x7684;&#x51E0;&#x79CD;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x7684;&#x4E3B;&#x8981;&#x601D;&#x60F3;&#x4EE5;&#x53CA;C++&#x4E0E;python&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x7684;&#x5B9E;&#x73B0;&#x8FC7;&#x7A0B;&#xFF0C; &#x51E0;&#x79CD;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x4E2D;&#x6BD4;&#x8F83;&#x91CD;&#x8981;&#x7684;&#x5C31;&#x662F;&#x5F52;&#x5E76;&#x6392;&#x5E8F;&#x548C;&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#xFF0C;&#x8FD9;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x7684;&#x76F8;&#x540C;&#x70B9;&#x5C31;&#x662F;&#x90FD;&#x4F7F;&#x7528;&#x4E86;&#x5206;&#x6CBB;&#x7684;&#x601D;&#x60F3;&#xFF0C;&#x73B0;&#x5728;&#xFFFD;&#xFFFD;&#xFFFD;&#x6765;&#x89E3;&#x51B3;&#x4E24;&#x4E2A;&#x5177;&#x4F53;&#x95EE;&#x9898;&#x3002;</p>
+<h2 id="1&#x5206;&#x6CBB;&#x6CD5;" data-anchor-id="b6h1">1.&#x5206;&#x6CBB;&#x6CD5;</h2>
+<p data-anchor-id="f22r">&#x2003;&#x2003;&#x5206;&#x6CBB;&#x6CD5;&#x5C31;&#x662F;&#x5C06;&#x539F;&#x95EE;&#x9898;&#x5206;&#x5272;&#x6210;&#x540C;&#x7B49;&#x7ED3;&#x6784;&#x7684;&#x5B50;&#x95EE;&#x9898;&#xFF0C;&#x4E4B;&#x540E;&#x5C06;&#x5B50;&#x95EE;&#x9898;&#x9010;&#x4E00;&#x89E3;&#x51B3;&#x540E;&#xFF0C;&#x539F;&#x95EE;&#x9898;&#x4E5F;&#x5C31;&#x5F97;&#x5230;&#x4E86;&#x89E3;&#x51B3;&#x3002; &#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x5F52;&#x5E76;&#x6392;&#x5E8F;&#x548C;&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#x867D;&#x7136;&#x90FD;&#x4F7F;&#x7528;&#x4E86;&#x5206;&#x6CBB;&#x7684;&#x601D;&#x60F3;&#xFF0C;&#x4F46;&#x5B83;&#x4EEC;&#x5206;&#x522B;&#x4EE3;&#x8868;&#x4E86;&#x5206;&#x6CBB;&#x7B97;&#x6CD5;&#x7684;&#x4E24;&#x7C7B;&#x57FA;&#x672C;&#x601D;&#x60F3;&#x3002;&#x5BF9;&#x4E8E;&#x5F52;&#x5E76;&#x6392;&#x5E8F;&#x800C;&#x8A00;&#xFF0C;&#x5B83;&#x5BF9;&#x201C;&#x5206;&#x201D;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x6CA1;&#x6709;&#x505A;&#x592A;&#x591A;&#x64CD;&#x4F5C;&#xFF0C;&#x53EA;&#x662F;&#x7B80;&#x5355;&#x7684;&#x5C06;&#x6570;&#x7EC4;&#x5206;&#x4E3A;&#x4E24;&#x90E8;&#x5206;&#x7136;&#x540E;&#x9012;&#x5F52;&#x7684;&#x8FDB;&#x884C;&#x5F52;&#x5E76;&#x6392;&#x5E8F;&#xFF0C;&#x800C;&#x5F52;&#x5E76;&#x6392;&#x5E8F;&#x7684;&#x5173;&#x952E;&#x662F;&#x8FD9;&#x6837;&#x5206;&#x5B8C;&#x4E4B;&#x540E;&#x5982;&#x4F55;&#x5C06;&#x5B83;&#x4EEC;&#x5F52;&#x5E76;&#x8D77;&#x6765;&#xFF0C;&#x5373;merge()&#x64CD;&#x4F5C;&#x3002;<span class="Apple-converted-space">&#xA0;<br>&#x2003;&#x2003;&#x800C;&#x5BF9;&#x4E8E;&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#x6765;&#x8BF4;&#xFF0C;&#x5219;&#x662F;&#x5E9F;&#x4E86;&#x5F88;&#x5927;&#x529F;&#x592B;&#x653E;&#x5728;&#x4E86;&#x5982;&#x4F55;&#x201C;&#x5206;&#x201D;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x4E0A;&#xFF0C;&#x6211;&#x4EEC;&#x662F;&#x9009;&#x53D6;&#x4E86;&#x4E00;&#x4E2A;&#x6807;&#x5B9A;&#x70B9;&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;partition()&#x8FD9;&#x4E2A;&#x5B50;&#x8FC7;&#x7A0B;&#x5C06;&#x8FD9;&#x4E2A;&#x6807;&#x5B9A;&#x70B9;&#x79FB;&#x5230;&#x4E86;&#x5408;&#x9002;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5F53;&#x5B83;&#x79FB;&#x5230;&#x4E86;&#x5408;&#x9002;&#x7684;&#x4F4D;&#x7F6E;&#x4E4B;&#x540E;&#x624D;&#x5C06;&#x6574;&#x4E2A;&#x6570;&#x7EC4;&#x5206;&#x6210;&#x4E86;&#x4E24;&#x90E8;&#x5206;&#xFF0C;&#x800C;&#x8FD9;&#x6837;&#x5206;&#x5B8C;&#x4E4B;&#x540E;&#xFF0C;&#x5728;&#x201C;&#x5408;&#x201D;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x4E0D;&#x7528;&#x505A;&#x8FC7;&#x591A;&#x7684;&#x8003;&#x8651;&#x4E86;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x9012;&#x5F52;&#x4E0B;&#x53BB;&#x5C31;&#x597D;&#x4E86;&#x3002;<span class="Apple-converted-space">&#xA0;<br>&#x2003;&#x2003;&#x4E0B;&#x9762;&#x89E3;&#x51B3;&#x4E24;&#x4E2A;&#x76F4;&#x63A5;&#x4ECE;&#x5F52;&#x5E76;&#x6392;&#x5E8F;&#x548C;&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#x4E2D;&#x884D;&#x751F;&#x51FA;&#x6765;&#x7684;&#x5177;&#x4F53;&#x95EE;&#x9898;&#x7684;&#x3002;</span></span></p>
+<h2 id="2&#x6C42;&#x9006;&#x5E8F;&#x5BF9;&#x6570;&#x91CF;" data-anchor-id="6v86">2.&#x6C42;&#x9006;&#x5E8F;&#x5BF9;&#x6570;&#x91CF;</h2>
+<ul data-anchor-id="z2fs">
+<li>&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;&#x5728;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x4E24;&#x4E2A;&#x6570;&#x5B57;&#xFF0C;&#x5982;&#x679C;&#x524D;&#x9762;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#x5927;&#x4E8E;&#x540E;&#x9762;&#x7684;&#x6570;&#x5B57;&#xFF0C;&#x5219;&#x8FD9;&#x4E24;&#x4E2A;&#x6570;&#x5B57;&#x7EC4;&#x6210;&#x4E00;&#x4E2A;&#x9006;&#x5E8F;&#x5BF9;&#x3002;&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x6C42;&#x51FA;&#x8FD9;&#x4E2A;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x9006;&#x5E8F;&#x5BF9;&#x7684;&#x603B;&#x6570;&#x3002;</li>
+<li>&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x76F4;&#x63A5;&#x7684;&#x505A;&#x6CD5;&#x662F;&#x9010;&#x4E2A;&#x7EDF;&#x8BA1;&#xFF0C;&#x590D;&#x6742;&#x5EA6;&#x662F;O(n^2)&#xFF0C;&#x4F46;&#x663E;&#x7136;&#x662F;&#x5F88;&#x611A;&#x8822;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x5F52;&#x5E76;&#x6392;&#x5E8F;&#x7684;&#x601D;&#x60F3;&#xFF0C;&#x5728;&#x5F52;&#x5E76;&#x6392;&#x5E8F;&#x8FC7;&#x7A0B;&#x4E2D;&#x7EDF;&#x8BA1;&#x9006;&#x5E8F;&#x5BF9;&#x7684;&#x4E2A;&#x6570;&#x3002;</li>
+<li>&#x5B9E;&#x73B0;&#x601D;&#x60F3;&#xFF1A;<span class="Apple-converted-space">&#xA0;<br>&#x2003;&#x2003;&#x5F52;&#x5E76;&#x6392;&#x5E8F;&#x662F;&#x5C06;&#x6570;&#x5217;a[l,r]&#x5206;&#x6210;&#x4E24;&#x90E8;&#x5206;&#xFF0C;a[l,mid]&#x548C;a[mid+1,r]&#x5206;&#x522B;&#x8FDB;&#x884C;&#x5F52;&#x5E76;&#x6392;&#x5E8F;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5C06;&#x8FD9;&#x4E24;&#x534A;&#x5408;&#x5E76;&#x8D77;&#x6765;&#x3002;&#x5728;&#x5408;&#x5E76;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF08;&#x8BBE;l&lt;=i&lt;=mid&#xFF0C;mid+1&lt;=j&lt;=r&#xFF09;&#xFF0C;&#x5F53;a[i]&lt;=a[j]&#x65F6;&#xFF0C;&#x5E76;&#x4E0D;&#x4EA7;&#x751F;&#x9006;&#x5E8F;&#x6570;&#xFF1B;&#x5F53;a[i]&gt;a[j]&#x65F6;&#xFF0C;&#x5728;&#x524D;&#x534A;&#x90E8;&#x5206;&#x4E2D;&#x6BD4;a[i]&#x5927;&#x7684;&#x6570;&#x90FD;&#x6BD4;a[j]&#x5927;&#xFF0C;&#x5C06;a[j]&#x653E;&#x5728;a[i]&#x524D;&#x9762;&#x7684;&#x8BDD;&#xFF0C;&#x9006;&#x5E8F;&#x6570;&#x8981;&#x52A0;&#x4E0A;mid+1-i&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x5F52;&#x5E76;&#x6392;&#x5E8F;&#x4E2D;&#x7684;&#x5408;&#x5E76;&#x8FC7;&#x7A0B;&#x4E2D;&#x8BA1;&#x7B97;&#x9006;&#x5E8F;&#x6570;&#x3002;</span></li>
+<li>C++&#x5B9E;&#x73B0;&#xFF1A;</li>
+</ul>
+<div class="cnblogs_code">
+<pre>#include &lt;iostream&gt;
+<span style="color: #0000ff">using</span> <span style="color: #0000ff">namespace</span><span style="color: #000000"> std;
+</span><span style="color: #008000">//</span><span style="color: #008000"> &#x8BA1;&#x7B97;&#x9006;&#x5E8F;&#x6570;&#x5BF9;&#x7684;&#x7ED3;&#x679C;&#x4EE5;long long&#x8FD4;&#x56DE;
+</span><span style="color: #008000">//</span><span style="color: #008000"> &#x56E0;&#x4E3A;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x5927;&#x5C0F;&#x4E3A;n&#x7684;&#x6570;&#x7EC4;, &#x5176;&#x6700;&#x5927;&#x7684;&#x9006;&#x5E8F;&#x6570;&#x5BF9;&#x4E2A;&#x6570;&#x4E3A; n*(n-1)/2, &#x975E;&#x5E38;&#x5BB9;&#x6613;&#x4EA7;&#x751F;&#x6574;&#x578B;&#x6EA2;&#x51FA;
+</span><span style="color: #008000">//</span><span style="color: #008000"> __merge&#x51FD;&#x6570;&#x6C42;&#x51FA;&#x5728;arr[l,mid]&#x548C;arr[mid+1,r]&#x6709;&#x5E8F;&#x7684;&#x57FA;&#x7840;&#x4E0A;, arr[l,r]&#x7684;&#x9006;&#x5E8F;&#x6570;&#x5BF9;&#x4E2A;&#x6570;</span>
+<span style="color: #0000ff">long</span> <span style="color: #0000ff">long</span> __merge(<span style="color: #0000ff">int</span> arr[],<span style="color: #0000ff">int</span> l,<span style="color: #0000ff">int</span> mid,<span style="color: #0000ff">int</span><span style="color: #000000"> r){
+</span><span style="color: #0000ff">long</span> <span style="color: #0000ff">long</span> res = <span style="color: #800080">0</span>;<span style="color: #008000">//</span><span style="color: #008000"> &#x521D;&#x59CB;&#x5316;&#x9006;&#x5E8F;&#x6570;&#x5BF9;&#x4E2A;&#x6570; res = 0</span>
+<span style="color: #0000ff">int</span> aux[r - l + <span style="color: #800080">1</span><span style="color: #000000">];
+</span><span style="color: #0000ff">for</span>(<span style="color: #0000ff">int</span> i = l;i &lt;= r;i++<span style="color: #000000">)
+aux[i </span>- l] =<span style="color: #000000"> arr[i];
+</span><span style="color: #0000ff">int</span> i =<span style="color: #000000"> l;
+</span><span style="color: #0000ff">int</span> j = mid + <span style="color: #800080">1</span><span style="color: #000000">;
+</span><span style="color: #0000ff">for</span>(<span style="color: #0000ff">int</span> k = l;k &lt;= r;k++<span style="color: #000000">){
+</span><span style="color: #0000ff">if</span>(i &gt;<span style="color: #000000"> mid){
+arr[k] </span>= aux[j -<span style="color: #000000"> l];
+j </span>++<span style="color: #000000">;
+}
+</span><span style="color: #0000ff">else</span> <span style="color: #0000ff">if</span>(j &gt;<span style="color: #000000"> r){
+arr[k] </span>= aux[i -<span style="color: #000000"> l];
+i </span>++<span style="color: #000000">;
+}
+</span><span style="color: #0000ff">else</span> <span style="color: #0000ff">if</span>(aux[i - l] &lt; aux[j -<span style="color: #000000"> l]){
+arr[k] </span>= aux[i -<span style="color: #000000"> l];
+i </span>++<span style="color: #000000">;
+}
+</span><span style="color: #0000ff">else</span>{<span style="color: #008000">//</span><span style="color: #008000"> &#x5DE6;&#x534A;&#x90E8;&#x5206;&#x6240;&#x6307;&#x5143;&#x7D20; &gt; &#x53F3;&#x534A;&#x90E8;&#x5206;&#x6240;&#x6307;&#x5143;&#x7D20;</span>
+arr[k] = aux[j -<span style="color: #000000"> l];
+j </span>++<span style="color: #000000">;
+res </span>+= (<span style="color: #0000ff">long</span> <span style="color: #0000ff">long</span>) (mid - i + <span style="color: #800080">1</span><span style="color: #000000">);
+</span><span style="color: #008000">//</span><span style="color: #008000"> &#x6B64;&#x65F6;, &#x56E0;&#x4E3A;&#x53F3;&#x534A;&#x90E8;&#x5206;&#x6240;&#x6307;&#x7684;&#x5143;&#x7D20;&#x5C0F;
+</span><span style="color: #008000">//</span><span style="color: #008000"> &#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#x548C;&#x5DE6;&#x534A;&#x90E8;&#x5206;&#x7684;&#x6240;&#x6709;&#x672A;&#x5904;&#x7406;&#x7684;&#x5143;&#x7D20;&#x90FD;&#x6784;&#x6210;&#x4E86;&#x9006;&#x5E8F;&#x6570;&#x5BF9;
+</span><span style="color: #008000">//</span><span style="color: #008000"> &#x5DE6;&#x534A;&#x90E8;&#x5206;&#x6B64;&#x65F6;&#x672A;&#x5904;&#x7406;&#x7684;&#x5143;&#x7D20;&#x4E2A;&#x6570;&#x4E3A; mid - j + 1</span>
+<span style="color: #000000">}
+}
+</span><span style="color: #0000ff">return</span><span style="color: #000000"> res;
+}
+</span><span style="color: #008000">//</span><span style="color: #008000"> &#x6C42;arr[l,r]&#x8303;&#x56F4;&#x7684;&#x9006;&#x5E8F;&#x6570;&#x5BF9;&#x4E2A;&#x6570;</span>
+<span style="color: #0000ff">long</span> <span style="color: #0000ff">long</span> __inversionCount(<span style="color: #0000ff">int</span> arr[],<span style="color: #0000ff">int</span> l,<span style="color: #0000ff">int</span><span style="color: #000000"> r){
+</span><span style="color: #0000ff">if</span>(l &gt;=<span style="color: #000000"> r)
+</span><span style="color: #0000ff">return</span> <span style="color: #800080">0</span><span style="color: #000000">;
+</span><span style="color: #0000ff">int</span> mid = l + (r - l) / <span style="color: #800080">2</span><span style="color: #000000">;
+</span><span style="color: #0000ff">long</span> <span style="color: #0000ff">long</span> res1 = __inversionCount(arr,l,mid);<span style="color: #008000">//</span><span style="color: #008000"> &#x6C42;&#x51FA; arr[l,mid] &#x8303;&#x56F4;&#x7684;&#x9006;&#x5E8F;&#x6570;</span>
+<span style="color: #0000ff">long</span> <span style="color: #0000ff">long</span> res2 = __inversionCount(arr,mid + <span style="color: #800080">1</span>,r);<span style="color: #008000">//</span><span style="color: #008000"> &#x6C42;&#x51FA; arr[mid+1,r] &#x8303;&#x56F4;&#x7684;&#x9006;&#x5E8F;&#x6570;</span>
+<span style="color: #0000ff">return</span> res1 + res2 +<span style="color: #000000"> __merge(arr,l,mid,r);
+}
+</span><span style="color: #0000ff">long</span> <span style="color: #0000ff">long</span> inversionCount(<span style="color: #0000ff">int</span> arr[],<span style="color: #0000ff">int</span><span style="color: #000000"> n){
+</span><span style="color: #0000ff">return</span> __inversionCount(arr,<span style="color: #800080">0</span>,n - <span style="color: #800080">1</span><span style="color: #000000">);
+}
+</span><span style="color: #0000ff">int</span><span style="color: #000000"> main(){
+</span><span style="color: #0000ff">int</span> a[<span style="color: #800080">10</span>] = {<span style="color: #800080">10</span>,<span style="color: #800080">9</span>,<span style="color: #800080">8</span>,<span style="color: #800080">7</span>,<span style="color: #800080">6</span>,<span style="color: #800080">5</span>,<span style="color: #800080">4</span>,<span style="color: #800080">3</span>,<span style="color: #800080">2</span>,<span style="color: #800080">1</span><span style="color: #000000">};
+</span><span style="color: #0000ff">int</span> n = <span style="color: #800080">10</span><span style="color: #000000">;
+cout</span>&lt;&lt; <span style="color: #800000">&quot;</span><span style="color: #800000">&#x9006;&#x5E8F;&#x5BF9;&#x6570;&#x91CF;&#x4E3A;&#xFF1A;</span><span style="color: #800000">&quot;</span> &lt;&lt; inversionCount(a,n)&lt;&lt;<span style="color: #000000">endl;
+}</span></pre>
+</div>
+<ul data-anchor-id="b583">
+<li>Python&#x5B9E;&#x73B0;&#xFF1A;</li>
+</ul>
+<div class="md-section-divider">&#xA0;
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff">def</span> <span style="color: #800080">__merge</span><span style="color: #000000">(arr,l,mid,r):
+res </span>=<span style="color: #000000"> 0
+aux </span>=<span style="color: #000000"> []
+</span><span style="color: #0000ff">for</span> x <span style="color: #0000ff">in</span> range(l,r + 1<span style="color: #000000">):
+aux.append(arr[x])
+i </span>=<span style="color: #000000"> l
+j </span>= mid + 1
+<span style="color: #0000ff">for</span> k <span style="color: #0000ff">in</span> range(l,r + 1<span style="color: #000000">):
+</span><span style="color: #0000ff">if</span> i &gt;<span style="color: #000000"> mid:
+arr[k] </span>= aux[j -<span style="color: #000000"> l]
+j </span>+= 1
+<span style="color: #0000ff">elif</span> j &gt;<span style="color: #000000"> r:
+arr[k] </span>= aux[i -<span style="color: #000000"> l]
+i </span>+= 1
+<span style="color: #0000ff">elif</span> aux[i - l] &lt; aux[j -<span style="color: #000000"> l]:
+arr[k] </span>= aux[i -<span style="color: #000000"> l]
+i </span>+= 1
+<span style="color: #0000ff">else</span><span style="color: #000000">:
+arr[k] </span>= aux[j -<span style="color: #000000"> l]
+j </span>+= 1<span style="color: #000000">
+res </span>+= mid - i + 1
+<span style="color: #0000ff">return</span><span style="color: #000000"> res
+</span><span style="color: #0000ff">def</span> <span style="color: #800080">__inversionCount</span><span style="color: #000000">(arr,l,r):
+</span><span style="color: #0000ff">if</span> l &gt;=<span style="color: #000000"> r:
+</span><span style="color: #0000ff">return</span><span style="color: #000000"> 0
+mid </span>= l + (r - l) // 2<span style="color: #000000">
+res1 </span>= <span style="color: #800080">__inversionCount</span><span style="color: #000000">(arr,l,mid)
+res2 </span>= <span style="color: #800080">__inversionCount</span>(arr,mid + 1<span style="color: #000000">,r)
+</span><span style="color: #0000ff">return</span> res1 + res2 + <span style="color: #800080">__merge</span><span style="color: #000000">(arr,l,mid,r)
+</span><span style="color: #0000ff">def</span><span style="color: #000000"> inversionCount(arr):
+n </span>=<span style="color: #000000"> len(arr)
+</span><span style="color: #0000ff">return</span> <span style="color: #800080">__inversionCount</span>(arr,0,n - 1<span style="color: #000000">)
+arr </span>= [10,9,8,7,6,5,4,3,2,1<span style="color: #000000">]
+res </span>=<span style="color: #000000"> inversionCount(arr)
+</span><span style="color: #0000ff">print</span>(<span style="color: #800000">&apos;</span><span style="color: #800000">&#x9006;&#x5E8F;&#x5BF9;&#x6570;&#x91CF;&#x4E3A;&#xFF1A;</span><span style="color: #800000">&apos;</span> + str(res))</pre>
+</div>
+<p>&#xA0;</p>
+</div>
+<h2 id="3&#x53D6;&#x6570;&#x7EC4;&#x4E2D;&#x7B2C;k&#x5927;&#x7684;&#x5143;&#x7D20;" data-anchor-id="cfoo">3.&#x53D6;&#x6570;&#x7EC4;&#x4E2D;&#x7B2C;k&#x5927;&#x7684;&#x5143;&#x7D20;</h2>
+<ul data-anchor-id="7bj8">
+<li>&#x9898;&#x76EE;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x6C42;&#x51FA;&#x8BE5;&#x6570;&#x7EC4;&#x4E2D;&#x7B2C;k&#x5927;&#x7684;&#x5143;&#x7D20;&#x3002;&#x6700;&#x7B80;&#x5355;&#xFFFD;&#xFFFD;&#x505A;&#x6CD5;&#x662F;&#x76F4;&#x63A5;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x7B97;&#x6CD5;&#x590D;&#x6742;&#x5EA6;&#x662F;O(nlogn)&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E48;&#x505A;&#x5F88;&#x660E;&#x663E;&#x6BD4;&#x8F83;&#x4F4E;&#x6548;&#x7387;&#xFF0C;&#x56E0;&#x4E3A;&#x53EA;&#x8981;&#x6C42;&#x51FA;&#x7B2C;k&#x5927;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x5E76;&#x4E0D;&#x9700;&#x8981;&#x522B;&#x7684;&#x4FE1;&#x606F;&#x3002;</li>
+<li>&#x53E6;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#x662F;&#x7528;&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#x7684;&#x601D;&#x60F3;&#x3002;&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#x6BCF;&#x6B21;&#x628A;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x4EA4;&#x6362;&#x5230;&#x6B63;&#x786E;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x540C;&#x65F6;&#x628A;&#x5DE6;&#x8FB9;&#x7684;&#x90FD;&#x653E;&#x4E0A;&#x5C0F;&#x7684;&#xFF0C;&#x53F3;&#x8FB9;&#x90FD;&#x653E;&#x4E0A;&#x5927;&#x7684;&#x3002;&#x8FD9;&#x4E2A;&#x7B97;&#x6CD5;&#x6BCF;&#x4E00;&#x6B21;&#x9009;&#x53D6;&#x4E00;&#x4E2A;&#x4E2D;&#x5FC3;&#x70B9;&#xFF0C;&#x6392;&#x5E8F;&#x4E4B;&#x540E;&#xFF0C;&#x67E5;&#x770B;&#x4E2D;&#x5FC3;&#x70B9;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x5982;&#x679C;&#x5B83;&#x7684;&#x4F4D;&#x7F6E;&#x5927;&#x4E8E;K&#xFF0C;&#x5C31;&#x8BF4;&#x660E;&#xFF0C;&#x8981;&#x5728;&#x524D;&#x9762;&#x4E00;&#x4E2A;&#x5B50;&#x5E8F;&#x5217;&#x4E2D;&#x627E;&#x51FA;&#x7B2C;K&#x5927;&#x7684;&#x5143;&#x7D20;&#x3002;&#x53CD;&#x4E4B;&#xFF0C;&#x5982;&#x679C;&#x5C0F;&#x4E8E;K&#xFF0C;&#x5C31;&#x8BF4;&#x660E;&#x8981;&#x5728;&#x540E;&#x9762;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x627E;&#x51FA;&#x7B2C;k&#x5927;&#x7684;&#x5143;&#x7D20;&#x3002;</li>
+<li>&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;&#xFF1A;<span class="Apple-converted-space">&#xA0;<br>&#x2003;&#x2003;&#x8FD9;&#x79CD;&#x7B97;&#x6CD5;&#x7684;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;&#x7A0D;&#x5FAE;&#x590D;&#x6742;&#x3002;&#x7B2C;&#x4E00;&#x6B21;&#x4EA4;&#x6362;&#xFF0C;&#x7B97;&#x6CD5;&#x590D;&#x6742;&#x5EA6;&#x4E3A;O(n)&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x8FC7;&#x7A0B;&#x548C;&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#x4E0D;&#x540C;&#xFF0C;&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#x662F;&#x8981;&#x7EE7;&#x7EED;&#x5904;&#x7406;&#x4E24;&#x8FB9;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x518D;&#x5408;&#x5E76;&#xFF0C;&#x5408;&#x5E76;&#x64CD;&#x4F5C;&#x7684;&#x7B97;&#x6CD5;&#x590D;&#x6742;&#x5EA6;&#x662F;O(1)&#xFF0C;&#x4E8E;&#x662F;&#x603B;&#x7684;&#x7B97;&#x6CD5;&#x590D;&#x6742;&#x5EA6;&#x662F;O(nlogn)&#xFF08;&#x53EF;&#x4EE5;&#x8FD9;&#x4E48;&#x7406;&#x89E3;&#xFF0C;&#x6BCF;&#x6B21;&#x4EA4;&#x6362;&#x7528;&#x4E86;n&#xFF0C;&#x4E00;&#x5171;logn&#x6B21;&#xFF09;&#x3002;&#x4F46;&#x662F;&#x8FD9;&#x91CC;&#x5728;&#x786E;&#x5B9A;&#x4E2D;&#x5FC3;&#x70B9;&#x7684;&#x76F8;&#x5BF9;&#x4F4D;&#x7F6E;&#xFF08;&#x5728;K&#x7684;&#x5DE6;&#x8FB9;&#x6216;&#x8005;&#x53F3;&#x8FB9;&#xFF09;&#x4E4B;&#x540E;&#x4E0D;&#x7528;&#x518D;&#x5BF9;&#x5269;&#x4E0B;&#x7684;&#x4E00;&#x534A;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x7B2C;&#x4E8C;&#x6B21;&#x63D2;&#x5165;&#x7684;&#x7B97;&#x6CD5;&#x590D;&#x6742;&#x5EA6;&#x4E0D;&#x518D;&#x662F;O(n)&#x800C;&#x662F;O(n/2)&#xFF0C;&#x7136;&#x540E;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x8FC7;&#x7A0B;&#x662F;1+1/2+1/4+........&lt;2&#xFF0C;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#x5C31;&#x662F;&#x4E00;&#x5171;&#x662F;O(2n)&#x7684;&#x7B97;&#x6CD5;&#x590D;&#x6742;&#x5EA6;&#x4E5F;&#x5C31;&#x662F;O(n)&#x7684;&#x7B97;&#x6CD5;&#x590D;&#x6742;&#x5EA6;&#x3002;<span class="Apple-converted-space">&#xA0;<br>&#x2003;&#x2003;&#x8FD9;&#x4E2A;&#x7B97;&#x6CD5;&#x662F;&#x4E00;&#x79CD;&#x5F88;&#x7ECF;&#x5178;&#x7684;&#x7B97;&#x6CD5;&#x3002;&#x539F;&#x56E0;&#x662F;&#x56E0;&#x4E3A;&#x5B83;&#x901A;&#x8FC7;&#x52AA;&#x529B;&#x628A;&#x7B97;&#x6CD5;&#x590D;&#x6742;&#x5EA6;&#x5728;&#x6BCF;&#x6B21;&#x9012;&#x5F52;&#x4E2D;&#x4E0B;&#x964D;&#x4E00;&#x4E9B;&#xFF0C;&#x6700;&#x7EC8;&#x8BA9;&#x6574;&#x4E2A;&#x7B97;&#x6CD5;&#x7684;&#x590D;&#x6742;&#x5EA6;&#x4E0B;&#x964D;&#x6781;&#x591A;&#xFF0C;&#x7B97;&#x662F;&#x4E00;&#x79CD;&#x5341;&#x5206;&#x806A;&#x660E;&#x7684;&#x505A;&#x6CD5;&#x3002;</span></span></li>
+<li>C++&#x5B9E;&#x73B0;&#xFF1A;</li>
+
+</ul>
+<div class="md-section-divider">
+<div class="cnblogs_code">
+<pre>#include &lt;iostream&gt;<span style="color: #000000">
+#include </span>&lt;cstdlib&gt;<span style="color: #000000">
+#include </span>&lt;ctime&gt;
+<span style="color: #0000ff">using</span> <span style="color: #0000ff">namespace</span><span style="color: #000000"> std;
+</span><span style="color: #0000ff">int</span> __partition(<span style="color: #0000ff">int</span> arr[],<span style="color: #0000ff">int</span> l,<span style="color: #0000ff">int</span><span style="color: #000000"> r){
+swap(arr[l],arr[rand()</span>%(r - l + <span style="color: #800080">1</span>) +<span style="color: #000000"> l]);
+</span><span style="color: #0000ff">int</span> v =<span style="color: #000000"> arr[l];
+</span><span style="color: #0000ff">int</span> j =<span style="color: #000000"> l;
+</span><span style="color: #0000ff">for</span>(<span style="color: #0000ff">int</span> i = l + <span style="color: #800080">1</span>;i &lt;= r;i++<span style="color: #000000">){
+</span><span style="color: #0000ff">if</span>(arr[i] &gt;<span style="color: #000000"> v){
+swap(arr[i],arr[j </span>+ <span style="color: #800080">1</span><span style="color: #000000">]);
+j </span>++<span style="color: #000000">;
+}
+}
+swap(arr[l],arr[j]);
+</span><span style="color: #0000ff">return</span><span style="color: #000000"> j;
+}
+</span><span style="color: #0000ff">int</span> __selection(<span style="color: #0000ff">int</span> arr[],<span style="color: #0000ff">int</span> l,<span style="color: #0000ff">int</span> r,<span style="color: #0000ff">int</span><span style="color: #000000"> k){
+</span><span style="color: #0000ff">if</span>(l ==<span style="color: #000000"> r)
+</span><span style="color: #0000ff">return</span><span style="color: #000000"> arr[l];
+</span><span style="color: #0000ff">int</span> p =<span style="color: #000000"> __partition(arr,l,r);
+</span><span style="color: #0000ff">if</span>(p ==<span style="color: #000000"> k)
+</span><span style="color: #0000ff">return</span><span style="color: #000000"> arr[p];
+</span><span style="color: #0000ff">else</span> <span style="color: #0000ff">if</span>(p &gt;<span style="color: #000000"> k)
+</span><span style="color: #0000ff">return</span> __selection(arr,l,p - <span style="color: #800080">1</span><span style="color: #000000">,k);
+</span><span style="color: #0000ff">else</span>
+<span style="color: #0000ff">return</span> __selection(arr,p + <span style="color: #800080">1</span><span style="color: #000000">,r,k);
+}
+</span><span style="color: #0000ff">int</span> selection(<span style="color: #0000ff">int</span> arr[],<span style="color: #0000ff">int</span> n,<span style="color: #0000ff">int</span><span style="color: #000000"> k){
+srand(time(NULL));
+</span><span style="color: #0000ff">return</span> __selection(arr,<span style="color: #800080">0</span>,n - <span style="color: #800080">1</span>,k - <span style="color: #800080">1</span>);<span style="color: #008000">//</span><span style="color: #008000">&#x7D22;&#x5F15;&#x662F;&#x4ECE;0&#x5F00;&#x59CB;&#x7684;</span>
+<span style="color: #000000">}
+</span><span style="color: #0000ff">int</span><span style="color: #000000"> main(){
+</span><span style="color: #0000ff">int</span> arr[<span style="color: #800080">10</span>] = {<span style="color: #800080">10</span>,<span style="color: #800080">9</span>,<span style="color: #800080">8</span>,<span style="color: #800080">7</span>,<span style="color: #800080">6</span>,<span style="color: #800080">5</span>,<span style="color: #800080">4</span>,<span style="color: #800080">3</span>,<span style="color: #800080">2</span>,<span style="color: #800080">1</span><span style="color: #000000">};
+</span><span style="color: #0000ff">int</span> n = <span style="color: #800080">10</span><span style="color: #000000">;
+cout</span>&lt;&lt;<span style="color: #800000">&quot;</span><span style="color: #800000">&#x6570;&#x7EC4;&#x4E2D;&#x7B2C;3&#x5927;&#x7684;&#x5143;&#x7D20;&#x4E3A;&#xFF1A;</span><span style="color: #800000">&quot;</span>&lt;&lt;selection(arr,n,<span style="color: #800080">3</span>)&lt;&lt;<span style="color: #000000">endl;
+}</span></pre>
+</div>
+<p>&#xA0;</p>
+</div>
+<ul data-anchor-id="v0t4">
+<li>Python&#x5B9E;&#x73B0;&#xFF1A;</li>
+</ul>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff">import</span><span style="color: #000000"> random
+</span><span style="color: #0000ff">def</span> <span style="color: #800080">__partition</span><span style="color: #000000">(arr,l,r):
+k </span>=<span style="color: #000000"> random.randint(l,r)
+arr[l],arr[k] </span>=<span style="color: #000000"> arr[k],arr[l]
+v</span>=<span style="color: #000000"> arr[l]
+j </span>=<span style="color: #000000"> l
+</span><span style="color: #0000ff">for</span> i <span style="color: #0000ff">in</span> range(l + 1,r + 1<span style="color: #000000">):
+</span><span style="color: #0000ff">if</span> arr[i] &lt;<span style="color: #000000"> v:
+arr[i],arr[j </span>+ 1] = arr[j + 1<span style="color: #000000">],arr[i]
+j </span>+= 1<span style="color: #000000">
+arr[l],arr[j] </span>=<span style="color: #000000"> arr[j],arr[l]
+</span><span style="color: #0000ff">return</span><span style="color: #000000"> j
+</span><span style="color: #0000ff">def</span> <span style="color: #800080">__selection</span><span style="color: #000000">(arr,l,r,k):
+</span><span style="color: #0000ff">if</span> l ==<span style="color: #000000"> r:
+</span><span style="color: #0000ff">return</span><span style="color: #000000"> arr[l]
+p </span>= <span style="color: #800080">__partition</span><span style="color: #000000">(arr,l,r)
+</span><span style="color: #0000ff">if</span> p ==<span style="color: #000000"> k:
+</span><span style="color: #0000ff">return</span><span style="color: #000000"> arr[p]
+</span><span style="color: #0000ff">elif</span> p &gt;<span style="color: #000000"> k:
+</span><span style="color: #0000ff">return</span> <span style="color: #800080">__selection</span>(arr,l,p - 1<span style="color: #000000">,k)
+</span><span style="color: #0000ff">else</span><span style="color: #000000">:
+</span><span style="color: #0000ff">return</span> <span style="color: #800080">__selection</span>(arr,p + 1<span style="color: #000000">,r,k)
+</span><span style="color: #0000ff">def</span><span style="color: #000000"> selection(arr,k):
+n </span>=<span style="color: #000000"> len(arr)
+</span><span style="color: #0000ff">return</span> <span style="color: #800080">__selection</span>(arr,0,n - 1,k - 1<span style="color: #000000">)
+arr </span>= [10,9,8,7,6,5,4,3,2,1<span style="color: #000000">]
+</span><span style="color: #0000ff">print</span>(<span style="color: #800000">&apos;</span><span style="color: #800000">&#x6570;&#x7EC4;&#x4E2D;&#x7B2C;2&#x5C0F;&#x7684;&#x5143;&#x7D20;&#x4E3A;</span><span style="color: #800000">&apos;</span>+ str(selection(arr,2)))</pre>
+</div>
+<hr>
+<p>&#x63A8;&#x8350;&#x4E00;&#x4E2A;&#x826F;&#x5FC3;&#x516C;&#x4F17;&#x53F7;&#x3010;IT&#x8D44;&#x6E90;&#x793E;&#x3011;&#xFF1A;</p>
+<p><strong>&#x672C;&#x516C;&#x4F17;&#x53F7;&#x81F4;&#x529B;&#x4E8E;&#x514D;&#x8D39;&#x5206;&#x4EAB;&#x5168;&#x7F51;&#x6700;&#x4F18;&#x79C0;&#x7684;&#x89C6;&#x9891;&#x8D44;&#x6E90;&#xFF0C;&#x5B66;&#x4E60;&#x8D44;&#x6599;&#xFF0C;&#x9762;&#x8BD5;&#x7ECF;&#x9A8C;&#x7B49;&#xFF0C;&#x524D;&#x7AEF;&#xFF0C;PHP&#xFF0C;JAVA&#xFF0C;&#x7B97;&#x6CD5;&#xFF0C;Python&#xFF0C;&#x5927;&#x6570;&#x636E;&#x7B49;&#x7B49;&#xFF0C;&#x4F60;&#x60F3;&#x8981;&#x7684;&#x8FD9;&#x90FD;&#x6709;</strong></p>
+<p>IT&#x8D44;&#x6E90;&#x793E;&#xFF0D;QQ&#x4EA4;&#x6D41;&#x7FA4;&#xFF1A;625494093</p>
+<p>&#x4E5F;&#x53EF;&#x6DFB;&#x52A0;&#x5FAE;&#x4FE1;&#x62C9;&#x4F60;&#x8FDB;&#x5FAE;&#x4FE1;&#x7FA4;: super1319164238</p>
+<p>&#x5FAE;&#x4FE1;&#x641C;&#x7D22;&#x516C;&#x4F17;&#x53F7;&#xFF1A;ITziyuanshe &#x6216;&#x8005;&#x626B;&#x63CF;&#x4E0B;&#x65B9;&#x4E8C;&#x7EF4;&#x7801;&#x76F4;&#x63A5;&#x5173;&#x6CE8;&#xFF0C;</p>
+<p>&#xA0;</p>
+<p><img src="https://images2018.cnblogs.com/blog/1101099/201804/1101099-20180409215027753-1207159550.png" alt="" width="324" height="306"></p>
+</div>
+<div class="remark-icons">&#xA0;</div>
+</div>
+</div>

@@ -1,0 +1,141 @@
+<p align="left"><span style="font-size: 16px;"><strong><span style="color: #0000ff;"><span style="color: #0000ff;"><span style="color: #0000ff;"><span class="postTitle2"><span style="color: #0000ff;">&#x5B66;&#x4E60;ASP.NET Core Razor &#x7F16;&#x7A0B;&#x7CFB;&#x5217;&#x76EE;&#x5F55;</span></span></span></span></span></strong></span></p>
+<p align="left"><span style="color: #0000ff; font-size: 16px;"><a id="homepage1_HomePageDays_DaysList_ctl02_DayList_TitleUrl_0" class="postTitle2" href="http://www.cnblogs.com/chillsrc/p/8579777.html"><span style="color: #0000ff;">&#x5B66;&#x4E60;ASP.NET Core Razor &#x7F16;&#x7A0B;&#x7CFB;&#x5217;&#x4E00;</span></a></span></p>
+<p align="left"><span style="color: #0000ff; font-size: 16px;"><a id="homepage1_HomePageDays_DaysList_ctl01_DayList_TitleUrl_0" class="postTitle2" href="http://www.cnblogs.com/chillsrc/p/8622439.html"><span style="color: #0000ff;">&#x5B66;&#x4E60;ASP.NET Core Razor &#x7F16;&#x7A0B;&#x7CFB;&#x5217;&#x4E8C;&#x2014;&#x2014;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x5B9E;&#x4F53;</span></a></span></p>
+<p align="left"><span style="color: #0000ff; font-size: 16px;">&#xA0;<a id="homepage1_HomePageDays_DaysList_ctl01_DayList_TitleUrl_0" class="postTitle2" href="http://www.cnblogs.com/chillsrc/p/8651973.html"><span style="color: #0000ff;">&#x5B66;&#x4E60;ASP.NET Core Razor &#x7F16;&#x7A0B;&#x7CFB;&#x5217;&#x4E09;&#x2014;&#x2014;&#x521B;&#x5EFA;&#x6570;&#x636E;&#x8868;&#x53CA;&#x521B;&#x5EFA;&#x9879;&#x76EE;&#x57FA;&#x672C;&#x9875;&#x9762;</span></a></span></p>
+<p align="left"><span style="color: #0000ff; font-size: 16px;"><a id="homepage1_HomePageDays_DaysList_ctl00_DayList_TitleUrl_0" class="postTitle2" href="http://www.cnblogs.com/chillsrc/p/8717199.html"><span style="color: #0000ff;">&#x5B66;&#x4E60;ASP.NET Core Razor &#x7F16;&#x7A0B;&#x7CFB;&#x5217;&#x56DB;&#x2014;&#x2014;Asp.Net Core Razor&#x5217;&#x8868;&#x6A21;&#x677F;&#x9875;&#x9762;</span></a></span></p>
+<p align="left">&#xA0;</p>
+<p align="left">&#xA0;</p>
+<p align="left"><span style="font-size: 16px;">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#x4E0A;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#x4E2D;&#x6211;&#x4EEC;&#x5B66;&#x4E60;&#x4E86;&#x5217;&#x8868;&#x9875;&#x9762;&#x7684;&#x7ED3;&#x6784;&#xFF0C;@page&#x4E0E;@model&#x4E24;&#x4E2A;&#x5173;&#x952E;Razor&#x6307;&#x4EE4;&#xFF0C;&#x4EE5;&#x53CA;&#x9875;&#x9762;&#x5E03;&#x5C40;&#x5E94;&#x8BE5;&#x4FEE;&#x6539;&#x54EA;&#x91CC;&#x3002;&#x8FD9;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#x6211;&#x4EEC;&#x6765;&#x5B66;&#x4E60;&#x4E00;&#x4E0B;&#x65B0;&#x5EFA;&#x9875;&#x9762;&#x3002;</span></p>
+<p align="left"><span style="font-size: 16px;">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x5728;Visual Studio 2017&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x7BA1;&#x7406;&#x5668;&#x4E2D;&#xFF0C;&#x6253;&#x5F00;<em>Pages/Books/Create.cshtml.cs</em> &#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x7684;&#x4EE3;&#x7801;&#x5982;&#x4E0B;:</span></p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">using</span><span style="color: #000000;"> System;
+</span><span style="color: #0000ff;">using</span><span style="color: #000000;"> System.Collections.Generic;
+</span><span style="color: #0000ff;">using</span><span style="color: #000000;"> System.Linq;
+</span><span style="color: #0000ff;">using</span><span style="color: #000000;"> System.Threading.Tasks;
+</span><span style="color: #0000ff;">using</span><span style="color: #000000;"> Microsoft.AspNetCore.Mvc;
+</span><span style="color: #0000ff;">using</span><span style="color: #000000;"> Microsoft.AspNetCore.Mvc.RazorPages;
+</span><span style="color: #0000ff;">using</span><span style="color: #000000;"> Microsoft.AspNetCore.Mvc.Rendering;
+</span><span style="color: #0000ff;">using</span><span style="color: #000000;"> RazorMvcBooks.Models;
+ 
+
+</span><span style="color: #0000ff;">namespace</span><span style="color: #000000;"> RazorMvcBooks.Pages.Books
+{
+    </span><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">class</span><span style="color: #000000;"> CreateModel : PageModel
+    {
+        </span><span style="color: #0000ff;">private</span> <span style="color: #0000ff;">readonly</span><span style="color: #000000;"> RazorMvcBooks.Models.BookContext _context;
+        </span><span style="color: #0000ff;">public</span><span style="color: #000000;"> CreateModel(RazorMvcBooks.Models.BookContext context)
+        {
+            _context </span>=<span style="color: #000000;"> context;
+        }
+
+        </span><span style="color: #0000ff;">public</span><span style="color: #000000;"> IActionResult OnGet()
+        {
+            </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> Page();
+        }
+
+        [BindProperty]
+        </span><span style="color: #0000ff;">public</span> Book Book { <span style="color: #0000ff;">get</span>; <span style="color: #0000ff;">set</span><span style="color: #000000;">; }
+        </span><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">async</span> Task&lt;IActionResult&gt;<span style="color: #000000;"> OnPostAsync()
+        {
+            </span><span style="color: #0000ff;">if</span> (!<span style="color: #000000;">ModelState.IsValid)
+            {
+                </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> Page();
+            }
+
+            _context.Book.Add(Book);
+            </span><span style="color: #0000ff;">await</span><span style="color: #000000;"> _context.SaveChangesAsync();
+            </span><span style="color: #0000ff;">return</span> RedirectToPage(<span style="color: #800000;">&quot;</span><span style="color: #800000;">./Index</span><span style="color: #800000;">&quot;</span><span style="color: #000000;">);
+        }
+    }
+}</span></pre>
+</div>
+<p>&#xA0;</p>
+<p align="left"><span style="font-size: 16px;">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; OnGet &#x65B9;&#x6CD5;&#x4E0E;&#x4E0A;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#x4E2D;&#x7684;OnGetAsync&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#x7684;&#x529F;&#x80FD;&#x4E00;&#x6837;&#xFF0C;&#x90FD;&#x662F;&#x8FDB;&#x884C;&#x9875;&#x9762;&#x521D;&#x59CB;&#x5316;&#x3002; &#x4F46;&#x662F;&#x201C;&#x65B0;&#x5EFA;&#x201D;&#x9875;&#x9762;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x8981;&#x521D;&#x59CB;&#x5316;&#x7684;&#x72B6;&#x6001;&#x3002; Page&#x65B9;&#x6CD5;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x5448;&#x73B0; &#x201C;&#x65B0;&#x5EFA;&#x201D;&#x9875;&#x9762;&#x5185;&#x5BB9;&#x7684; PageResult &#x5BF9;&#x8C61;&#x3002;</span></p>
+<p align="left"><span style="font-size: 16px;">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#x5C5E;&#x6027;Book&#x4F7F;&#x7528; [BindProperty] &#x7279;&#x6027;&#x7ED1;&#x5B9A;&#x5230;&#x201C;&#x65B0;&#x5EFA;&#x201D;&#x9875;&#x9762;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x4E2D;&#x3002; &#x5F53;&#x201C;&#x65B0;&#x5EFA;&#x201D;&#x9875;&#x9762;&#x7684;&#x8868;&#x5355;&#x628A;&#x8868;&#x5355;&#x4E2D;&#x7684;&#x503C;&#x4EE5;POST&#x7684;&#x65B9;&#x5F0F;&#x53D1;&#x9001;&#x5230;&#x540E;&#x53F0;&#x65F6;&#xFF0C;ASP.NET Core &#x8FD0;&#x884C;&#x65F6;&#x4F1A;&#x5C06;&#x8868;&#x5355;&#x4E2D;&#x7684;&#x503C;&#x7ED1;&#x5B9A;&#x5230; Book&#x5B9E;&#x4F53;&#x4E0A;&#x3002;</span></p>
+<p align="left"><span style="font-size: 16px;">&#xA0;</span></p>
+<p align="left"><span style="font-size: 16px;">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#x5728;&#x9875;&#x9762;&#x4E2D;&#x70B9;&#x51FB;&#x201C;Create&#x201D;&#x6309;&#x94AE;&#xFF0C;&#x5373;&#x901A;&#x8FC7;POST&#x65B9;&#x6CD5;&#x53D1;&#x51FA;&#x8868;&#x5355;&#x6570;&#x636E;&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;Asp.Net Core&#x5C06;&#x8C03;&#x7528; OnPostAsync &#x65B9;&#x6CD5;&#xFF1A;&#xA0;&#xA0; <br></span></p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">async</span> Task&lt;IActionResult&gt;<span style="color: #000000;"> OnPostAsync()
+        {
+
+            </span><span style="color: #0000ff;">if</span> (!<span style="color: #000000;">ModelState.IsValid)
+            {
+                </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> Page();
+            }
+
+            _context.Book.Add(Book);
+            </span><span style="color: #0000ff;">await</span><span style="color: #000000;"> _context.SaveChangesAsync();
+            </span><span style="color: #0000ff;">return</span> RedirectToPage(<span style="color: #800000;">&quot;</span><span style="color: #800000;">./Index</span><span style="color: #800000;">&quot;</span><span style="color: #000000;">);
+        }</span></pre>
+</div>
+<p align="left"><span style="font-size: 16px;">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#x5982;&#x679C;&#x6709;&#x4EFB;&#x4F55;&#x9519;&#x8BEF;&#xFF0C;&#x6CA1;&#x6709;&#x901A;&#x8FC7;&#x6821;&#x9A8C;&#x89C4;&#x5219;&#xFF0C;&#x9875;&#x9762;&#x5C06;&#x91CD;&#x65B0;&#x663E;&#x793A;&#x8868;&#x5355;&#xFF0C;&#x4EE5;&#x53CA;&#x6211;&#x4EEC;&#x521A;&#x624D;&#x586B;&#x5199;&#x7684;&#x6570;&#x636E;&#x3002; &#x5728;&#x8868;&#x5355;&#x53D1;&#x51FA;&#x8BF7;&#x6C42;&#x524D;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x6DFB;&#x52A0;&#x6821;&#xFFFD;&#xFFFD;&#x800C;&#x6355;&#x83B7;&#x5230;&#x5927;&#x90E8;&#x5206;&#x9519;&#x8BEF;&#x3002; &#x4F8B;&#x5982;&#x4EE5;&#x4E0B;&#x7684;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x793A;&#x4F8B;&#xFF0C;&#x8868;&#x5355;&#x4E2D;&#x586B;&#x5199;&#x7684;&#x65E5;&#x671F;&#x5B57;&#x6BB5;&#x503C;&#x65E0;&#x6CD5;&#x8F6C;&#x6362;&#x4E3A;&#x65E5;&#x671F;&#x683C;&#x5F0F;&#x6570;&#x636E;&#x3002;</span></p>
+<p align="left"><span style="font-size: 16px;">&#xA0;<img src="https://images2018.cnblogs.com/blog/10343/201804/10343-20180410133852304-258742497.png" alt=""></span></p>
+<p align="left"><span style="font-size: 16px;">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#x9519;&#x8BEF;&#xFF0C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5C06;&#x4F1A;&#x628A;&#x6211;&#x4EEC;&#x586B;&#x5199;&#x7684;&#x6570;&#x636E;&#x4FDD;&#x5B58;&#x5230;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5E76;&#x4E14;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x91CD;&#x5B9A;&#x5411;&#x5230;&#x4E66;&#x7C4D;&#x5217;&#x8868;&#x9875;&#x9762;&#xFF0C;&#x5728;&#x4E66;&#x7C4D;&#x5217;&#x8868;&#x9875;&#x9762;&#x4E2D;&#x7684;&#x4E66;&#x7C4D;&#x5217;&#x8868;&#x4E2D;&#x4F1A;&#x51FA;&#x73B0;&#x6211;&#x4EEC;&#x521A;&#x624D;&#x4FDD;&#x5B58;&#x7684;&#x6570;&#x636E;&#x3002;&#x5982;&#x4E0B;&#x56FE;&#x3002; <img src="https://images2018.cnblogs.com/blog/10343/201804/10343-20180410133903483-702754353.png" alt=""></span></p>
+<p align="left"><span style="font-size: 16px;"><strong>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#x65B0;&#x5EFA;&#x9875;&#x9762;&#x7684; Razor &#x524D;&#x53F0;&#x9875;&#x9762;</strong></span></p>
+<p align="left"><span style="font-size: 16px;">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x5728;Visual Studio 2017&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x8D44;&#x6E90;&#x7BA1;&#x7406;&#x5668;&#x4E2D;&#x4F7F;&#x7528;&#x9F20;&#x6807;&#x5DE6;&#x952E;&#x53CC;&#x51FB;&#x6253;&#x5F00; <em>Pages/Books/Create.cshtml</em> Razor&#x6587;&#x4EF6;&#xFF0C;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</span></p>
+<div class="cnblogs_code">
+<pre><span style="color: #000000;">@page
+@model RazorMvcBooks.Pages.Books.CreateModel
+@{
+    ViewData[&quot;Title&quot;] = &quot;Create&quot;;
+}
+</span><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">h2</span><span style="color: #0000ff;">&gt;</span>Create<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">h2</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">h4</span><span style="color: #0000ff;">&gt;</span>Book<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">h4</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">hr </span><span style="color: #0000ff;">/&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">class</span><span style="color: #0000ff;">=&quot;row&quot;</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">class</span><span style="color: #0000ff;">=&quot;col-md-4&quot;</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">form </span><span style="color: #ff0000;">method</span><span style="color: #0000ff;">=&quot;post&quot;</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">asp-validation-summary</span><span style="color: #0000ff;">=&quot;ModelOnly&quot;</span><span style="color: #ff0000;"> class</span><span style="color: #0000ff;">=&quot;text-danger&quot;</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">class</span><span style="color: #0000ff;">=&quot;form-group&quot;</span><span style="color: #0000ff;">&gt;</span>
+                <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">label </span><span style="color: #ff0000;">asp-for</span><span style="color: #0000ff;">=&quot;Book.Name&quot;</span><span style="color: #ff0000;"> class</span><span style="color: #0000ff;">=&quot;control-label&quot;</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">label</span><span style="color: #0000ff;">&gt;</span>
+                <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">input </span><span style="color: #ff0000;">asp-for</span><span style="color: #0000ff;">=&quot;Book.Name&quot;</span><span style="color: #ff0000;"> class</span><span style="color: #0000ff;">=&quot;form-control&quot;</span> <span style="color: #0000ff;">/&gt;</span>
+                <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">span </span><span style="color: #ff0000;">asp-validation-for</span><span style="color: #0000ff;">=&quot;Book.Name&quot;</span><span style="color: #ff0000;"> class</span><span style="color: #0000ff;">=&quot;text-danger&quot;</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">span</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">class</span><span style="color: #0000ff;">=&quot;form-group&quot;</span><span style="color: #0000ff;">&gt;</span>
+                <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">label </span><span style="color: #ff0000;">asp-for</span><span style="color: #0000ff;">=&quot;Book.ReleaseDate&quot;</span><span style="color: #ff0000;"> class</span><span style="color: #0000ff;">=&quot;control-label&quot;</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">label</span><span style="color: #0000ff;">&gt;</span>
+                <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">input </span><span style="color: #ff0000;">asp-for</span><span style="color: #0000ff;">=&quot;Book.ReleaseDate&quot;</span><span style="color: #ff0000;"> class</span><span style="color: #0000ff;">=&quot;form-control&quot;</span> <span style="color: #0000ff;">/&gt;</span>
+                <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">span </span><span style="color: #ff0000;">asp-validation-for</span><span style="color: #0000ff;">=&quot;Book.ReleaseDate&quot;</span><span style="color: #ff0000;"> class</span><span style="color: #0000ff;">=&quot;text-danger&quot;</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">span</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">class</span><span style="color: #0000ff;">=&quot;form-group&quot;</span><span style="color: #0000ff;">&gt;</span>
+                <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">label </span><span style="color: #ff0000;">asp-for</span><span style="color: #0000ff;">=&quot;Book.Author&quot;</span><span style="color: #ff0000;"> class</span><span style="color: #0000ff;">=&quot;control-label&quot;</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">label</span><span style="color: #0000ff;">&gt;</span>
+                <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">input </span><span style="color: #ff0000;">asp-for</span><span style="color: #0000ff;">=&quot;Book.Author&quot;</span><span style="color: #ff0000;"> class</span><span style="color: #0000ff;">=&quot;form-control&quot;</span> <span style="color: #0000ff;">/&gt;</span>
+                <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">span </span><span style="color: #ff0000;">asp-validation-for</span><span style="color: #0000ff;">=&quot;Book.Author&quot;</span><span style="color: #ff0000;"> class</span><span style="color: #0000ff;">=&quot;text-danger&quot;</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">span</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">class</span><span style="color: #0000ff;">=&quot;form-group&quot;</span><span style="color: #0000ff;">&gt;</span>
+                <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">label </span><span style="color: #ff0000;">asp-for</span><span style="color: #0000ff;">=&quot;Book.Price&quot;</span><span style="color: #ff0000;"> class</span><span style="color: #0000ff;">=&quot;control-label&quot;</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">label</span><span style="color: #0000ff;">&gt;</span>
+
+                <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">input </span><span style="color: #ff0000;">asp-for</span><span style="color: #0000ff;">=&quot;Book.Price&quot;</span><span style="color: #ff0000;"> class</span><span style="color: #0000ff;">=&quot;form-control&quot;</span> <span style="color: #0000ff;">/&gt;</span>
+                <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">span </span><span style="color: #ff0000;">asp-validation-for</span><span style="color: #0000ff;">=&quot;Book.Price&quot;</span><span style="color: #ff0000;"> class</span><span style="color: #0000ff;">=&quot;text-danger&quot;</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">span</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">class</span><span style="color: #0000ff;">=&quot;form-group&quot;</span><span style="color: #0000ff;">&gt;</span>
+                <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">input </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">=&quot;submit&quot;</span><span style="color: #ff0000;"> value</span><span style="color: #0000ff;">=&quot;Create&quot;</span><span style="color: #ff0000;"> class</span><span style="color: #0000ff;">=&quot;btn btn-default&quot;</span> <span style="color: #0000ff;">/&gt;</span>
+            <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">form</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">a </span><span style="color: #ff0000;">asp-page</span><span style="color: #0000ff;">=&quot;Index&quot;</span><span style="color: #0000ff;">&gt;</span>Back to List<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">a</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span><span style="color: #000000;">
+@section Scripts {
+    @{await Html.RenderPartialAsync(&quot;_ValidationScriptsPartial&quot;);}<br>}</span></pre>
+</div>
+<p>&#xA0;</p>
+<p align="left"><span style="font-size: 16px;">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Visual Studio&#x4EE5;&#x4E00;&#x79CD;&#x72EC;&#x7279;&#x7684;&#x5B57;&#x4F53;&#x663E;&#x793A;&lt;form method=&quot;post&quot;&gt; &#x6807;&#x8BB0;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</span></p>
+<p align="left"><span style="font-size: 16px;">&#xA0;<img src="https://images2018.cnblogs.com/blog/10343/201804/10343-20180410134134117-1175586119.png" alt=""></span></p>
+<p align="left"><span style="font-size: 16px;">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &lt;form method=&quot;post&quot;&gt; &#x5143;&#x7D20;&#x662F;&#x4E00;&#x4E2A;&#x8868;&#x5355;&#x6807;&#x8BB0;&#x52A9;&#x624B;&#x3002; &#x8868;&#x5355;&#x6807;&#x8BB0;&#x52A9;&#x624B;&#x4F1A;&#x81EA;&#x52A8;&#x5305;&#x542B;&#x9632;&#x4F2A;&#x6807;&#x8BB0;&#x3002;</span></p>
+<p align="left"><span style="font-size: 16px;">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#x57FA;&#x67B6;&#x5F15;&#x64CE;&#x5728;Razor&#x9875;&#x9762;&#x4E2D;&#x4E3A;&#x6BCF;&#x4E2A;&#x5B57;&#x6BB5;&#xFF08;ID &#x9664;&#x5916;&#xFF09;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;&#x4E0B;&#x9762;&#x7684; Razor &#x6807;&#x7B7E;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;&#xA0; <br></span></p>
+<div class="cnblogs_code">
+<pre>  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">asp-validation-summary</span><span style="color: #0000ff;">=&quot;ModelOnly&quot;</span><span style="color: #ff0000;"> class</span><span style="color: #0000ff;">=&quot;text-danger&quot;</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">class</span><span style="color: #0000ff;">=&quot;form-group&quot;</span><span style="color: #0000ff;">&gt;</span>
+                <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">label </span><span style="color: #ff0000;">asp-for</span><span style="color: #0000ff;">=&quot;Book.Name&quot;</span><span style="color: #ff0000;"> class</span><span style="color: #0000ff;">=&quot;control-label&quot;</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">label</span><span style="color: #0000ff;">&gt;</span>
+                <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">input </span><span style="color: #ff0000;">asp-for</span><span style="color: #0000ff;">=&quot;Book.Name&quot;</span><span style="color: #ff0000;"> class</span><span style="color: #0000ff;">=&quot;form-control&quot;</span> <span style="color: #0000ff;">/&gt;</span>
+                <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">span </span><span style="color: #ff0000;">asp-validation-for</span><span style="color: #0000ff;">=&quot;Book.Name&quot;</span><span style="color: #ff0000;"> class</span><span style="color: #0000ff;">=&quot;text-danger&quot;</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">span</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p align="left"><span style="font-size: 16px;">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#x5BF9;&#x4E8E;&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x8F85;&#x52A9;&#x52A9;&#x624B;&#x4ECB;&#x7ECD;&#x5982;&#x4E0B;&#xFF1A;</span></p>
+<p align="left"><span style="font-size: 16px;">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#x6821;&#x9A8C;&#x6807;&#x7B7E;&#x52A9;&#x624B;&#xFF08;&lt;div asp-validation-summary &#x548C; &lt;span asp-validation-for&#xFF09;&#x663E;&#x793A;&#x9A8C;&#x8BC1;&#x9519;&#x8BEF;&#x3002;</span></p>
+<p align="left"><span style="font-size: 16px;">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#x6807;&#x7B7E;&#x8F85;&#x52A9;&#x52A9;&#x624B; (&lt;label asp-for=&quot;Book.Name&quot; class=&quot;control-label&quot;&gt;&lt;/label&gt;) &#x4E3A;&#x5B9E;&#x4F53;&#x5BF9;&#x8C61;&#x5B57;&#x6BB5;&#x751F;&#x6210;&#x63CF;&#x8FF0;&#x6807;&#x7B7E;&#x6807;&#x9898;&#x548C;&#x5C5E;&#x6027;&#x3002;</span></p>
+<p align="left"><span style="font-size: 16px;">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#x8F93;&#x5165;&#x8F85;&#x52A9;&#x52A9;&#x624B; (&lt;input asp-for=&quot;Book.Name&quot; class=&quot;form-control&quot; /&gt;) &#x5728;&#x5B9E;&#x4F53;&#x7C7B;&#x4E0A;&#x91C7;&#x7528;dataannotations&#x5C5E;&#x6027;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x751F;&#x6210; jQuery &#x9A8C;&#x8BC1;&#x6240;&#x9700;&#x7684; HTML &#x5C5E;&#x6027;&#x3002;</span></p>
+<p align="left"><span style="font-size: 16px;">&#xA0;</span></p>
+<p><span style="font-size: 16px;">&#xA0;</span></p>
+<p><span style="font-size: 16px;">&#xA0;</span></p>

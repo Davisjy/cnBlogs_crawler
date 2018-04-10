@@ -1,0 +1,656 @@
+<p>1.&#x5728; XPath &#x4E2D;&#xFF0C;&#x6709;&#x4E03;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x8282;&#x70B9;&#xFF1A;&#x5143;&#x7D20;&#x3001;&#x5C5E;&#x6027;&#x3001;&#x6587;&#x672C;&#x3001;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x3001;&#x5904;&#x7406;&#x6307;&#x4EE4;&#x3001;&#x6CE8;&#x91CA;&#x4EE5;&#x53CA;&#x6587;&#x6863;&#x8282;&#x70B9;&#xFF08;&#x6216;&#x79F0;&#x4E3A;&#x6839;&#x8282;&#x70B9;&#xFF09;&#x3002;</p>
+<p>1.1&#xA0;</p>
+<h2>XPath &#x672F;&#x8BED;</h2>
+<h3>&#x8282;&#x70B9;&#xFF08;Node&#xFF09;</h3>
+<p>&#x5728; XPath &#x4E2D;&#xFF0C;&#x6709;&#x4E03;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x8282;&#x70B9;&#xFF1A;&#x5143;&#x7D20;&#x3001;&#x5C5E;&#x6027;&#x3001;&#x6587;&#x672C;&#x3001;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x3001;&#x5904;&#x7406;&#x6307;&#x4EE4;&#x3001;&#x6CE8;&#x91CA;&#x4EE5;&#x53CA;&#x6587;&#x6863;&#xFF08;&#x6839;&#xFF09;&#x8282;&#x70B9;&#x3002;XML &#x6587;&#x6863;&#x662F;&#x88AB;&#x4F5C;&#x4E3A;&#x8282;&#x70B9;&#x6811;&#x6765;&#x5BF9;&#x5F85;&#x7684;&#x3002;&#x6811;&#x7684;&#x6839;&#x88AB;&#x79F0;&#x4E3A;&#x6587;&#x6863;&#x8282;&#x70B9;&#x6216;&#x8005;&#x6839;&#x8282;&#x70B9;&#x3002;</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;?</span><span style="color: #ff00ff;">xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;</span><span style="color: #0000ff;">?&gt;</span>
+
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">bookstore</span><span style="color: #0000ff;">&gt;</span>
+
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">book</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">title </span><span style="color: #ff0000;">lang</span><span style="color: #0000ff;">=&quot;en&quot;</span><span style="color: #0000ff;">&gt;</span>Harry Potter<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span>J K. Rowling<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span> 
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">year</span><span style="color: #0000ff;">&gt;</span>2005<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">year</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">price</span><span style="color: #0000ff;">&gt;</span>29.99<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">price</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">book</span><span style="color: #0000ff;">&gt;</span>
+
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">bookstore</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>&#x4E0A;&#x9762;&#x7684;XML&#x6587;&#x6863;&#x4E2D;&#x7684;&#x8282;&#x70B9;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">bookstore</span><span style="color: #0000ff;">&gt;</span><span style="color: #000000;"> &#xFF08;&#x6587;&#x6863;&#x8282;&#x70B9;&#xFF09;
+</span><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span>J K. Rowling<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span><span style="color: #000000;"> &#xFF08;&#x5143;&#x7D20;&#x8282;&#x70B9;&#xFF09;
+lang=&quot;en&quot; &#xFF08;&#x5C5E;&#x6027;&#x8282;&#x70B9;&#xFF09; </span></pre>
+</div>
+<h3>&#x57FA;&#x672C;&#x503C;&#xFF08;&#x6216;&#x79F0;&#x539F;&#x5B50;&#x503C;&#xFF0C;Atomic value&#xFF09;</h3>
+<p>&#x57FA;&#x672C;&#x503C;&#x662F;&#x65E0;&#x7236;&#x6216;&#x65E0;&#x5B50;&#x7684;&#x8282;&#x70B9;&#x3002;</p>
+<p>&#x57FA;&#x672C;&#x503C;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<div class="cnblogs_code">
+<pre><span style="color: #000000;">J K. Rowling
+&quot;en&quot;</span></pre>
+</div>
+<h3>&#x9879;&#x76EE;&#xFF08;Item&#xFF09;</h3>
+<p>&#x9879;&#x76EE;&#x662F;&#x57FA;&#x672C;&#x503C;&#x6216;&#x8005;&#x8282;&#x70B9;&#x3002;</p>
+<h2>&#x8282;&#x70B9;&#x5173;&#x7CFB;</h2>
+<h3>&#x7236;&#xFF08;Parent&#xFF09;</h3>
+<p>&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x4EE5;&#x53CA;&#x5C5E;&#x6027;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x7236;&#x3002;</p>
+<p>&#x5728;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;book &#x5143;&#x7D20;&#x662F; title&#x3001;author&#x3001;year &#x4EE5;&#x53CA; price &#x5143;&#x7D20;&#x7684;&#x7236;&#xFF1A;</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">book</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>Harry Potter<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span>J K. Rowling<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">year</span><span style="color: #0000ff;">&gt;</span>2005<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">year</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">price</span><span style="color: #0000ff;">&gt;</span>29.99<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">price</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">book</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<h3>&#x5B50;&#xFF08;Children&#xFF09;</h3>
+<p>&#x5143;&#x7D20;&#x8282;&#x70B9;&#x53EF;&#x6709;&#x96F6;&#x4E2A;&#x3001;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5B50;&#x3002;</p>
+<p>&#x5728;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;title&#x3001;author&#x3001;year &#x4EE5;&#x53CA; price &#x5143;&#x7D20;&#x90FD;&#x662F; book &#x5143;&#x7D20;&#x7684;&#x5B50;&#xFF1A;</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">book</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>Harry Potter<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span>J K. Rowling<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">year</span><span style="color: #0000ff;">&gt;</span>2005<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">year</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">price</span><span style="color: #0000ff;">&gt;</span>29.99<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">price</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">book</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<h3>&#x540C;&#x80DE;&#xFF08;Sibling&#xFF09;</h3>
+<p>&#x62E5;&#x6709;&#x76F8;&#x540C;&#x7684;&#x7236;&#x7684;&#x8282;&#x70B9;</p>
+<p>&#x5728;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;title&#x3001;author&#x3001;year &#x4EE5;&#x53CA; price &#x5143;&#x7D20;&#x90FD;&#x662F;&#x540C;&#x80DE;&#xFF1A;</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">book</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>Harry Potter<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span>J K. Rowling<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">year</span><span style="color: #0000ff;">&gt;</span>2005<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">year</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">price</span><span style="color: #0000ff;">&gt;</span>29.99<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">price</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">book</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<h3>&#x5148;&#x8F88;&#xFF08;Ancestor&#xFF09;</h3>
+<p>&#x67D0;&#x8282;&#x70B9;&#x7684;&#x7236;&#x3001;&#x7236;&#x7684;&#x7236;&#xFF0C;&#x7B49;&#x7B49;&#x3002;</p>
+<p>&#x5728;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;title &#x5143;&#x7D20;&#x7684;&#x5148;&#x8F88;&#x662F; book &#x5143;&#x7D20;&#x548C; bookstore &#x5143;&#x7D20;&#xFF1A;</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">bookstore</span><span style="color: #0000ff;">&gt;</span>
+
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">book</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>Harry Potter<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span>J K. Rowling<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">year</span><span style="color: #0000ff;">&gt;</span>2005<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">year</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">price</span><span style="color: #0000ff;">&gt;</span>29.99<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">price</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">book</span><span style="color: #0000ff;">&gt;</span>
+
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">bookstore</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<h3>&#x540E;&#x4EE3;&#xFF08;Descendant&#xFF09;</h3>
+<p>&#x67D0;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x5B50;&#xFF0C;&#x5B50;&#x7684;&#x5B50;&#xFF0C;&#x7B49;&#x7B49;&#x3002;</p>
+<p>&#x5728;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;bookstore &#x7684;&#x540E;&#x4EE3;&#x662F; book&#x3001;title&#x3001;author&#x3001;year &#x4EE5;&#x53CA; price &#x5143;&#x7D20;&#xFF1A;</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">bookstore</span><span style="color: #0000ff;">&gt;</span>
+
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">book</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>Harry Potter<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span>J K. Rowling<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">year</span><span style="color: #0000ff;">&gt;</span>2005<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">year</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">price</span><span style="color: #0000ff;">&gt;</span>29.99<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">price</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">book</span><span style="color: #0000ff;">&gt;</span>
+
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">bookstore</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>2.&#xA0;XPath &#x4F7F;&#x7528;&#x8DEF;&#x5F84;&#x8868;&#x8FBE;&#x5F0F;&#x6765;&#x9009;&#x53D6; XML &#x6587;&#x6863;&#x4E2D;&#x7684;&#x8282;&#x70B9;&#x6216;&#x8282;&#x70B9;&#x96C6;&#x3002;&#x8282;&#x70B9;&#x662F;&#x901A;&#x8FC7;&#x6CBF;&#x7740;&#x8DEF;&#x5F84; (path) &#x6216;&#x8005;&#x6B65; (steps) &#x6765;&#x9009;&#x53D6;&#x7684;&#x3002;</p>
+<h2>XML &#x5B9E;&#x4F8B;&#x6587;&#x6863;</h2>
+<p>&#x6211;&#x4EEC;&#x5C06;&#x5728;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A; XML &#x6587;&#x6863;&#x3002;</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;?</span><span style="color: #ff00ff;">xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;</span><span style="color: #0000ff;">?&gt;</span>
+
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">booksto.....................................................re</span><span style="color: #0000ff;">&gt;</span>
+
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">book</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">title </span><span style="color: #ff0000;">lang</span><span style="color: #0000ff;">=&quot;eng&quot;</span><span style="color: #0000ff;">&gt;</span>Harry Potter<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">price</span><span style="color: #0000ff;">&gt;</span>29.99<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">price</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">book</span><span style="color: #0000ff;">&gt;</span>
+
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">book</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">title </span><span style="color: #ff0000;">lang</span><span style="color: #0000ff;">=&quot;eng&quot;</span><span style="color: #0000ff;">&gt;</span>Learning XML<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">price</span><span style="color: #0000ff;">&gt;</span>39.95<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">price</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">book</span><span style="color: #0000ff;">&gt;</span>
+
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">bookstore</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<h2>&#x9009;&#x53D6;&#x8282;&#x70B9;</h2>
+<p>XPath &#x4F7F;&#x7528;&#x8DEF;&#x5F84;&#x8868;&#x8FBE;&#x5F0F;&#x5728; XML &#x6587;&#x6863;&#x4E2D;&#x9009;&#x53D6;&#x8282;&#x70B9;&#x3002;&#x8282;&#x70B9;&#x662F;&#x901A;&#x8FC7;&#x6CBF;&#x7740;&#x8DEF;&#x5F84;&#x6216;&#x8005; step &#x6765;&#x9009;&#x53D6;&#x7684;&#x3002;</p>
+<h3>&#x4E0B;&#x9762;&#x5217;&#x51FA;&#x4E86;&#x6700;&#x6709;&#x7528;&#x7684;&#x8DEF;&#x5F84;&#x8868;&#x8FBE;&#x5F0F;&#xFF1A;</h3>
+<table class="dataintable" style="height: 186px; width: 1126px;">
+<tbody>
+<tr><th>&#x8868;&#x8FBE;&#x5F0F;</th><th>&#x63CF;&#x8FF0;</th></tr>
+<tr>
+<td>nodename</td>
+<td>&#x9009;&#x53D6;&#x6B64;&#x8282;&#x70B9;&#x7684;&#x6240;&#x6709;&#x5B50;&#x8282;&#x70B9;&#x3002;</td>
+</tr>
+<tr>
+<td>/</td>
+<td>&#x4ECE;&#x6839;&#x8282;&#x70B9;&#x9009;&#x53D6;&#x3002;</td>
+</tr>
+<tr>
+<td>//</td>
+<td>&#x4ECE;&#x5339;&#x914D;&#x9009;&#x62E9;&#x7684;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x9009;&#x62E9;&#x6587;&#x6863;&#x4E2D;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x800C;&#x4E0D;&#x8003;&#x8651;&#x5B83;&#x4EEC;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</td>
+</tr>
+<tr>
+<td>.</td>
+<td>&#x9009;&#x53D6;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x3002;</td>
+</tr>
+<tr>
+<td>..</td>
+<td>&#x9009;&#x53D6;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x7236;&#x8282;&#x70B9;&#x3002;</td>
+</tr>
+<tr>
+<td>@</td>
+<td>&#x9009;&#x53D6;&#x5C5E;&#x6027;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h3>&#x5B9E;&#x4F8B;</h3>
+<p>&#x5728;&#x4E0B;&#x9762;&#x7684;&#x8868;&#x683C;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x5217;&#x51FA;&#x4E86;&#x4E00;&#x4E9B;&#x8DEF;&#x5F84;&#x8868;&#x8FBE;&#x5F0F;&#x4EE5;&#x53CA;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x7ED3;&#x679C;&#xFF1A;</p>
+<table class="dataintable" style="height: 220px; width: 1186px;">
+<tbody>
+<tr><th>&#x8DEF;&#x5F84;&#x8868;&#x8FBE;&#x5F0F;</th><th>&#x7ED3;&#x679C;</th></tr>
+<tr>
+<td>bookstore</td>
+<td>&#x9009;&#x53D6; bookstore &#x5143;&#x7D20;&#x7684;&#x6240;&#x6709;&#x5B50;&#x8282;&#x70B9;&#x3002;</td>
+</tr>
+<tr>
+<td>/bookstore</td>
+<td>
+<p>&#x9009;&#x53D6;&#x6839;&#x5143;&#x7D20; bookstore&#x3002;</p>
+<p>&#x6CE8;&#x91CA;&#xFF1A;&#x5047;&#x5982;&#x8DEF;&#x5F84;&#x8D77;&#x59CB;&#x4E8E;&#x6B63;&#x659C;&#x6760;( / )&#xFF0C;&#x5219;&#x6B64;&#x8DEF;&#x5F84;&#x59CB;&#x7EC8;&#x4EE3;&#x8868;&#x5230;&#x67D0;&#x5143;&#x7D20;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#xFF01;</p>
+</td>
+</tr>
+<tr>
+<td>bookstore/book</td>
+<td>&#x9009;&#x53D6;&#x5C5E;&#x4E8E; bookstore &#x7684;&#x5B50;&#x5143;&#x7D20;&#x7684;&#x6240;&#x6709; book &#x5143;&#x7D20;&#x3002;</td>
+</tr>
+<tr>
+<td>//book</td>
+<td>&#x9009;&#x53D6;&#x6240;&#x6709; book &#x5B50;&#x5143;&#x7D20;&#xFF0C;&#x800C;&#x4E0D;&#x7BA1;&#x5B83;&#x4EEC;&#x5728;&#x6587;&#x6863;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</td>
+</tr>
+<tr>
+<td>bookstore//book</td>
+<td>&#x9009;&#x62E9;&#x5C5E;&#x4E8E; bookstore &#x5143;&#x7D20;&#x7684;&#x540E;&#x4EE3;&#x7684;&#x6240;&#x6709; book &#x5143;&#x7D20;&#xFF0C;&#x800C;&#x4E0D;&#x7BA1;&#x5B83;&#x4EEC;&#x4F4D;&#x4E8E; bookstore &#x4E4B;&#x4E0B;&#x7684;&#x4EC0;&#x4E48;&#x4F4D;&#x7F6E;&#x3002;</td>
+</tr>
+<tr>
+<td>//@lang</td>
+<td>&#x9009;&#x53D6;&#x540D;&#x4E3A; lang &#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h2>&#x8C13;&#x8BED;&#xFF08;Predicates&#xFF09;</h2>
+<h2><span style="font-size: 14px;"><br>&#x8C13;&#x8BED;&#x7528;&#x6765;&#x67E5;&#x627E;&#x67D0;&#x4E2A;&#x7279;&#x5B9A;&#x7684;&#x8282;&#x70B9;&#x6216;&#x8005;&#x5305;&#x542B;&#x67D0;&#x4E2A;&#x6307;&#x5B9A;&#x7684;&#x503C;&#x7684;&#x8282;&#x70B9;&#x3002;</span></h2>
+<p>&#x8C13;&#x8BED;&#x88AB;&#x5D4C;&#x5728;&#x65B9;&#x62EC;&#x53F7;&#x4E2D;&#x3002;</p>
+<h3>&#x5B9E;&#x4F8B;</h3>
+<p>&#x5728;&#x4E0B;&#x9762;&#x7684;&#x8868;&#x683C;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5217;&#x51FA;&#x4E86;&#x5E26;&#x6709;&#x8C13;&#x8BED;&#x7684;&#x4E00;&#x4E9B;&#x8DEF;&#x5F84;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x4EE5;&#x53CA;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x7ED3;&#x679C;&#xFF1A;</p>
+<table class="dataintable" style="height: 240px; width: 1203px;">
+<tbody>
+<tr><th>&#x8DEF;&#x5F84;&#x8868;&#x8FBE;&#x5F0F;</th><th>&#x7ED3;&#x679C;</th></tr>
+<tr>
+<td>/bookstore/book[1]</td>
+<td>&#x9009;&#x53D6;&#x5C5E;&#x4E8E; bookstore &#x5B50;&#x5143;&#x7D20;&#x7684;&#x7B2C;&#x4E00;&#x4E2A; book &#x5143;&#x7D20;&#x3002;</td>
+
+</tr>
+<tr>
+<td>/bookstore/book[last()]</td>
+<td>&#x9009;&#x53D6;&#x5C5E;&#x4E8E; bookstore &#x5B50;&#x5143;&#x7D20;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A; book &#x5143;&#x7D20;&#x3002;</td>
+
+</tr>
+<tr>
+<td>/bookstore/book[last()-1]</td>
+<td>&#x9009;&#x53D6;&#x5C5E;&#x4E8E; bookstore &#x5B50;&#x5143;&#x7D20;&#x7684;&#x5012;&#x6570;&#xFFFD;&#xFFFD;&#x4E8C;&#x4E2A; book &#x5143;&#x7D20;&#x3002;</td>
+
+</tr>
+<tr>
+<td>/bookstore/book[position()&lt;3]</td>
+<td>&#x9009;&#x53D6;&#x6700;&#x524D;&#x9762;&#x7684;&#x4E24;&#x4E2A;&#x5C5E;&#x4E8E; bookstore &#x5143;&#x7D20;&#x7684;&#x5B50;&#x5143;&#x7D20;&#x7684; book &#x5143;&#x7D20;&#x3002;</td>
+
+</tr>
+<tr>
+<td>//title[@lang]</td>
+<td>&#x9009;&#x53D6;&#x6240;&#x6709;&#x62E5;&#x6709;&#x540D;&#x4E3A; lang &#x7684;&#x5C5E;&#x6027;&#x7684; title &#x5143;&#x7D20;&#x3002;</td>
+
+</tr>
+<tr>
+<td>//title[@lang=&apos;eng&apos;]</td>
+<td>&#x9009;&#x53D6;&#x6240;&#x6709; title &#x5143;&#x7D20;&#xFF0C;&#x4E14;&#x8FD9;&#x4E9B;&#x5143;&#x7D20;&#x62E5;&#x6709;&#x503C;&#x4E3A; eng &#x7684; lang &#x5C5E;&#x6027;&#x3002;</td>
+
+</tr>
+<tr>
+<td>/bookstore/book[price&gt;35.00]</td>
+<td>&#x9009;&#x53D6; bookstore &#x5143;&#x7D20;&#x7684;&#x6240;&#x6709; book &#x5143;&#x7D20;&#xFF0C;&#x4E14;&#x5176;&#x4E2D;&#x7684; price &#x5143;&#x7D20;&#x7684;&#x503C;&#x987B;&#x5927;&#x4E8E; 35.00&#x3002;</td>
+
+</tr>
+<tr>
+<td>/bookstore/book[price&gt;35.00]/title</td>
+<td>&#x9009;&#x53D6; bookstore &#x5143;&#x7D20;&#x4E2D;&#x7684; book &#x5143;&#x7D20;&#x7684;&#x6240;&#x6709; title &#x5143;&#x7D20;&#xFF0C;&#x4E14;&#x5176;&#x4E2D;&#x7684; price &#x5143;&#x7D20;&#x7684;&#x503C;&#x987B;&#x5927;&#x4E8E; 35.00&#x3002;</td>
+
+</tr>
+
+</tbody>
+
+</table>
+<h2>&#x9009;&#x53D6;&#x672A;&#x77E5;&#x8282;&#x70B9;</h2>
+<p>XPath &#x901A;&#x914D;&#x7B26;&#x53EF;&#x7528;&#x6765;&#x9009;&#x53D6;&#x672A;&#x77E5;&#x7684; XML &#x5143;&#x7D20;&#x3002;</p>
+<table class="dataintable" style="height: 101px; width: 1206px;">
+<tbody>
+<tr><th>&#x901A;&#x914D;&#x7B26;</th><th>&#x63CF;&#x8FF0;</th></tr>
+<tr>
+<td>*</td>
+<td>&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x5143;&#x7D20;&#x8282;&#x70B9;&#x3002;</td>
+
+</tr>
+<tr>
+<td>@*</td>
+<td>&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x5C5E;&#x6027;&#x8282;&#x70B9;&#x3002;</td>
+
+</tr>
+<tr>
+<td>node()</td>
+<td>&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x7C7B;&#x578B;&#x7684;&#x8282;&#x70B9;&#x3002;</td>
+
+</tr>
+
+</tbody>
+
+</table>
+<p>&#xA0;</p>
+<h3>&#x5B9E;&#x4F8B;</h3>
+<p>&#x5728;&#x4E0B;&#x9762;&#x7684;&#x8868;&#x683C;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5217;&#x51FA;&#x4E86;&#x4E00;&#x4E9B;&#x8DEF;&#x5F84;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x4EE5;&#x53CA;&#x8FD9;&#x4E9B;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x7ED3;&#x679C;&#xFF1A;</p>
+<table class="dataintable" style="height: 101px; width: 1215px;">
+<tbody>
+<tr><th>&#x8DEF;&#x5F84;&#x8868;&#x8FBE;&#x5F0F;</th><th>&#x7ED3;&#x679C;</th></tr>
+<tr>
+<td>/bookstore/*</td>
+<td>&#x9009;&#x53D6; bookstore &#x5143;&#x7D20;&#x7684;&#x6240;&#x6709;&#x5B50;&#x5143;&#x7D20;&#x3002;</td>
+
+</tr>
+<tr>
+<td>//*</td>
+<td>&#x9009;&#x53D6;&#x6587;&#x6863;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;&#x3002;</td>
+
+</tr>
+<tr>
+<td>//title[@*]</td>
+<td>&#x9009;&#x53D6;&#x6240;&#x6709;&#x5E26;&#x6709;&#x5C5E;&#x6027;&#x7684; title &#x5143;&#x7D20;&#x3002;</td>
+
+</tr>
+
+</tbody>
+
+</table>
+<h2>&#x9009;&#x53D6;&#x82E5;&#x5E72;&#x8DEF;&#x5F84;</h2>
+<p>&#x901A;&#x8FC7;&#x5728;&#x8DEF;&#x5F84;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x4F7F;&#x7528;&#x201C;|&#x201D;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x9009;&#x53D6;&#x82E5;&#x5E72;&#x4E2A;&#x8DEF;&#x5F84;&#x3002;</p>
+<h3>&#x5B9E;&#x4F8B;</h3>
+<p>&#x5728;&#x4E0B;&#x9762;&#x7684;&#x8868;&#x683C;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5217;&#x51FA;&#x4E86;&#x4E00;&#x4E9B;&#x8DEF;&#x5F84;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x4EE5;&#x53CA;&#x8FD9;&#x4E9B;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x7ED3;&#x679C;&#xFF1A;</p>
+<table class="dataintable" style="height: 101px; width: 1221px;">
+<tbody>
+<tr><th>&#x8DEF;&#x5F84;&#x8868;&#x8FBE;&#x5F0F;</th><th>&#x7ED3;&#x679C;</th></tr>
+<tr>
+<td>//book/title | //book/price</td>
+<td>&#x9009;&#x53D6; book &#x5143;&#x7D20;&#x7684;&#x6240;&#x6709; title &#x548C; price &#x5143;&#x7D20;&#x3002;</td>
+
+</tr>
+<tr>
+<td>//title | //price</td>
+<td>&#x9009;&#x53D6;&#x6587;&#x6863;&#x4E2D;&#x7684;&#x6240;&#x6709; title &#x548C; price &#x5143;&#x7D20;&#x3002;</td>
+
+</tr>
+<tr>
+<td>/bookstore/book/title | //price</td>
+<td>&#x9009;&#x53D6;&#x5C5E;&#x4E8E; bookstore &#x5143;&#x7D20;&#x7684; book &#x5143;&#x7D20;&#x7684;&#x6240;&#x6709; title &#x5143;&#x7D20;&#xFF0C;&#x4EE5;&#x53CA;&#x6587;&#x6863;&#x4E2D;&#x6240;&#x6709;&#x7684; price &#x5143;&#x7D20;&#x3002;</td>
+
+</tr>
+
+</tbody>
+
+</table>
+<h1>XPath Axes&#xFF08;&#x8F74;&#xFF09;</h1>
+<h2>XML &#x5B9E;&#x4F8B;&#x6587;&#x6863;</h2>
+<p>&#x6211;&#x4EEC;&#x5C06;&#x5728;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#x4F7F;&#x7528;&#x6B64; XML &#x6587;&#x6863;&#xFF1A;</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;?</span><span style="color: #ff00ff;">xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;</span><span style="color: #0000ff;">?&gt;</span>
+
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">bookstore</span><span style="color: #0000ff;">&gt;</span>
+
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">book</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">title </span><span style="color: #ff0000;">lang</span><span style="color: #0000ff;">=&quot;eng&quot;</span><span style="color: #0000ff;">&gt;</span>Harry Potter<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">price</span><span style="color: #0000ff;">&gt;</span>29.99<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">price</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">book</span><span style="color: #0000ff;">&gt;</span>
+
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">book</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">title </span><span style="color: #ff0000;">lang</span><span style="color: #0000ff;">=&quot;eng&quot;</span><span style="color: #0000ff;">&gt;</span>Learning XML<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">price</span><span style="color: #0000ff;">&gt;</span>39.95<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">price</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">book</span><span style="color: #0000ff;">&gt;</span>
+
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">bookstore</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<h2>XPath &#x8F74;</h2>
+<p>&#x8F74;&#x53EF;&#x5B9A;&#x4E49;&#x76F8;&#x5BF9;&#x4E8E;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x8282;&#x70B9;&#x96C6;&#x3002;</p>
+<table class="dataintable" style="height: 317px; width: 912px;">
+<tbody>
+<tr><th>&#x8F74;&#x540D;&#x79F0;</th><th>&#x7ED3;&#x679C;</th></tr>
+<tr>
+<td>ancestor</td>
+<td>&#x9009;&#x53D6;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x6240;&#x6709;&#x5148;&#x8F88;&#xFF08;&#x7236;&#x3001;&#x7956;&#x7236;&#x7B49;&#xFF09;&#x3002;</td>
+</tr>
+<tr>
+<td>ancestor-or-self</td>
+<td>&#x9009;&#x53D6;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x6240;&#x6709;&#x5148;&#x8F88;&#xFF08;&#x7236;&#x3001;&#x7956;&#x7236;&#x7B49;&#xFF09;&#x4EE5;&#x53CA;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x672C;&#x8EAB;&#x3002;</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>&#x9009;&#x53D6;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x3002;</td>
+</tr>
+<tr>
+<td>child</td>
+<td>&#x9009;&#x53D6;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x6240;&#x6709;&#x5B50;&#x5143;&#x7D20;&#x3002;</td>
+</tr>
+<tr>
+<td>descendant</td>
+<td>&#x9009;&#x53D6;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x6240;&#x6709;&#x540E;&#x4EE3;&#x5143;&#x7D20;&#xFF08;&#x5B50;&#x3001;&#x5B59;&#x7B49;&#xFF09;&#x3002;</td>
+</tr>
+<tr>
+<td>descendant-or-self</td>
+<td>&#x9009;&#x53D6;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x6240;&#x6709;&#x540E;&#x4EE3;&#x5143;&#x7D20;&#xFF08;&#x5B50;&#x3001;&#x5B59;&#x7B49;&#xFF09;&#x4EE5;&#x53CA;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x672C;&#x8EAB;&#x3002;</td>
+</tr>
+<tr>
+<td>following</td>
+<td>&#x9009;&#x53D6;&#x6587;&#x6863;&#x4E2D;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x7ED3;&#x675F;&#x6807;&#x7B7E;&#x4E4B;&#x540E;&#x7684;&#x6240;&#x6709;&#x8282;&#x70B9;&#x3002;</td>
+</tr>
+<tr>
+<td>namespace</td>
+<td>&#x9009;&#x53D6;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x6240;&#x6709;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x8282;&#x70B9;&#x3002;</td>
+</tr>
+<tr>
+<td>parent</td>
+<td>&#x9009;&#x53D6;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x7236;&#x8282;&#x70B9;&#x3002;</td>
+</tr>
+<tr>
+<td>preceding</td>
+<td>&#x9009;&#x53D6;&#x6587;&#x6863;&#x4E2D;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x5F00;&#x59CB;&#x6807;&#x7B7E;&#x4E4B;&#x524D;&#x7684;&#x6240;&#x6709;&#x8282;&#x70B9;&#x3002;</td>
+</tr>
+<tr>
+<td>preceding-sibling</td>
+<td>&#x9009;&#x53D6;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x4E4B;&#x524D;&#x7684;&#x6240;&#x6709;&#x540C;&#x7EA7;&#x8282;&#x70B9;&#x3002;</td>
+</tr>
+<tr>
+<td>self</td>
+<td>&#x9009;&#x53D6;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h2>&#x4F4D;&#x7F6E;&#x8DEF;&#x5F84;&#x8868;&#x8FBE;&#x5F0F;</h2>
+<p>&#x4F4D;&#x7F6E;&#x8DEF;&#x5F84;&#x53EF;&#x4EE5;&#x662F;&#x7EDD;&#x5BF9;&#x7684;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x76F8;&#x5BF9;&#x7684;&#x3002;</p>
+<p>&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x8D77;&#x59CB;&#x4E8E;&#x6B63;&#x659C;&#x6760;( / )&#xFF0C;&#x800C;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#x4E0D;&#x4F1A;&#x8FD9;&#x6837;&#x3002;&#x5728;&#x4E24;&#x79CD;&#x60C5;&#x51B5;&#x4E2D;&#xFF0C;&#x4F4D;&#x7F6E;&#x8DEF;&#x5F84;&#x5747;&#x5305;&#x62EC;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x6B65;&#xFF0C;&#x6BCF;&#x4E2A;&#x6B65;&#x5747;&#x88AB;&#x659C;&#x6760;&#x5206;&#x5272;&#xFF1A;</p>
+<h3>&#x7EDD;&#x5BF9;&#x4F4D;&#x7F6E;&#x8DEF;&#x5F84;&#xFF1A;</h3>
+<pre>/step/step/...</pre>
+<h3>&#x76F8;&#x5BF9;&#x4F4D;&#x7F6E;&#x8DEF;&#x5F84;&#xFF1A;</h3>
+<pre>step/step/...</pre>
+<h3>&#x6B65;&#x7684;&#x8BED;&#x6CD5;&#xFF1A;</h3>
+<div class="cnblogs_code">
+<pre>&#x8F74;&#x540D;&#x79F0;::&#x8282;&#x70B9;&#x6D4B;&#x8BD5;[&#x8C13;&#x8BED;]</pre>
+</div>
+<h3>&#x5B9E;&#x4F8B;</h3>
+<table class="dataintable" style="height: 269px; width: 851px;">
+<tbody>
+<tr><th>&#x4F8B;&#x5B50;</th><th>&#x7ED3;&#x679C;</th></tr>
+<tr>
+<td>child::book</td>
+<td>&#x9009;&#x53D6;&#x6240;&#x6709;&#x5C5E;&#x4E8E;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x5B50;&#x5143;&#x7D20;&#x7684; book &#x8282;&#x70B9;&#x3002;</td>
+</tr>
+<tr>
+<td>attribute::lang</td>
+<td>&#x9009;&#x53D6;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684; lang &#x5C5E;&#x6027;&#x3002;</td>
+</tr>
+<tr>
+<td>child::*</td>
+<td>&#x9009;&#x53D6;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x6240;&#x6709;&#x5B50;&#x5143;&#x7D20;&#x3002;</td>
+</tr>
+<tr>
+<td>attribute::*</td>
+<td>&#x9009;&#x53D6;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x3002;</td>
+</tr>
+<tr>
+<td>child::text()</td>
+<td>&#x9009;&#x53D6;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x6240;&#x6709;&#x6587;&#x672C;&#x5B50;&#x8282;&#x70B9;&#x3002;</td>
+</tr>
+<tr>
+<td>child::node()</td>
+<td>&#x9009;&#x53D6;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x6240;&#x6709;&#x5B50;&#x8282;&#x70B9;&#x3002;</td>
+</tr>
+<tr>
+<td>descendant::book</td>
+<td>&#x9009;&#x53D6;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x6240;&#x6709; book &#x540E;&#x4EE3;&#x3002;</td>
+</tr>
+<tr>
+<td>ancestor::book</td>
+<td>&#x9009;&#x62E9;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x6240;&#x6709; book &#x5148;&#x8F88;&#x3002;</td>
+</tr>
+<tr>
+<td>ancestor-or-self::book</td>
+<td>&#x9009;&#x53D6;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x6240;&#x6709; book &#x5148;&#x8F88;&#x4EE5;&#x53CA;&#x5F53;&#x524D;&#x8282;&#x70B9;&#xFF08;&#x5982;&#x679C;&#x6B64;&#x8282;&#x70B9;&#x662F; book &#x8282;&#x70B9;&#xFF09;</td>
+</tr>
+<tr>
+<td>child::*/child::price</td>
+<td>&#x9009;&#x53D6;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x6240;&#x6709; price &#x5B59;&#x8282;&#x70B9;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h2>XPath &#x8FD0;&#x7B97;&#x7B26;</h2>
+<p>&#x4E0B;&#x9762;&#x5217;&#x51FA;&#x4E86;&#x53EF;&#x7528;&#x5728; XPath &#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x7684;&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;</p>
+<table class="dataintable" style="height: 706px; width: 852px;">
+<tbody>
+<tr><th>&#x8FD0;&#x7B97;&#x7B26;</th><th>&#x63CF;&#x8FF0;</th><th>&#x5B9E;&#x4F8B;</th><th>&#x8FD4;&#x56DE;&#x503C;</th></tr>
+<tr>
+<td>|</td>
+<td>&#x8BA1;&#x7B97;&#x4E24;&#x4E2A;&#x8282;&#x70B9;&#x96C6;</td>
+<td>//book | //cd</td>
+<td>&#x8FD4;&#x56DE;&#x6240;&#x6709;&#x62E5;&#x6709; book &#x548C; cd &#x5143;&#x7D20;&#x7684;&#x8282;&#x70B9;&#x96C6;</td>
+</tr>
+<tr>
+<td>+</td>
+<td>&#x52A0;&#x6CD5;</td>
+<td>6 + 4</td>
+<td>10</td>
+</tr>
+<tr>
+<td>-</td>
+<td>&#x51CF;&#xFFFD;&#xFFFD;</td>
+<td>6 - 4</td>
+<td>2</td>
+</tr>
+<tr>
+<td>*</td>
+<td>&#x4E58;&#x6CD5;</td>
+<td>6 * 4</td>
+<td>24</td>
+</tr>
+<tr>
+<td>div</td>
+<td>&#x9664;&#x6CD5;</td>
+<td>8 div 4</td>
+<td>2</td>
+</tr>
+<tr>
+<td>=</td>
+<td>&#x7B49;&#x4E8E;</td>
+<td>price=9.80</td>
+<td>
+<p>&#x5982;&#x679C; price &#x662F; 9.80&#xFF0C;&#x5219;&#x8FD4;&#x56DE; true&#x3002;</p>
+<p>&#x5982;&#x679C; price &#x662F; 9.90&#xFF0C;&#x5219;&#x8FD4;&#x56DE; false&#x3002;</p>
+</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>&#x4E0D;&#x7B49;&#x4E8E;</td>
+<td>price!=9.80</td>
+<td>
+<p>&#x5982;&#x679C; price &#x662F; 9.90&#xFF0C;&#x5219;&#x8FD4;&#x56DE; true&#x3002;</p>
+<p>&#x5982;&#x679C; price &#x662F; 9.80&#xFF0C;&#x5219;&#x8FD4;&#x56DE; false&#x3002;</p>
+</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>&#x5C0F;&#x4E8E;</td>
+<td>price&lt;9.80</td>
+<td>
+<p>&#x5982;&#x679C; price &#x662F; 9.00&#xFF0C;&#x5219;&#x8FD4;&#x56DE; true&#x3002;</p>
+<p>&#x5982;&#x679C; price &#x662F; 9.90&#xFF0C;&#x5219;&#x8FD4;&#x56DE; false&#x3002;</p>
+</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>&#x5C0F;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;</td>
+<td>price&lt;=9.80</td>
+<td>
+<p>&#x5982;&#x679C; price &#x662F; 9.00&#xFF0C;&#x5219;&#x8FD4;&#x56DE; true&#x3002;</p>
+<p>&#x5982;&#x679C; price &#x662F; 9.90&#xFF0C;&#x5219;&#x8FD4;&#x56DE; false&#x3002;</p>
+</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>&#x5927;&#x4E8E;</td>
+<td>price&gt;9.80</td>
+<td>
+<p>&#x5982;&#x679C; price &#x662F; 9.90&#xFF0C;&#x5219;&#x8FD4;&#x56DE; true&#x3002;</p>
+<p>&#x5982;&#x679C; price &#x662F; 9.80&#xFF0C;&#x5219;&#x8FD4;&#x56DE; false&#x3002;</p>
+</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;</td>
+<td>price&gt;=9.80</td>
+<td>
+<p>&#x5982;&#x679C; price &#x662F; 9.90&#xFF0C;&#x5219;&#x8FD4;&#x56DE; true&#x3002;</p>
+<p>&#x5982;&#x679C; price &#x662F; 9.70&#xFF0C;&#x5219;&#x8FD4;&#x56DE; false&#x3002;</p>
+</td>
+</tr>
+<tr>
+<td>or</td>
+<td>&#x6216;</td>
+<td>price=9.80 or price=9.70</td>
+<td>
+<p>&#x5982;&#x679C; price &#x662F; 9.80&#xFFFD;&#xFFFD;&#xFFFD;&#x5219;&#x8FD4;&#x56DE; true&#x3002;</p>
+<p>&#x5982;&#x679C; price &#x662F; 9.50&#xFF0C;&#x5219;&#x8FD4;&#x56DE; false&#x3002;</p>
+</td>
+</tr>
+<tr>
+<td>and</td>
+<td>&#x4E0E;</td>
+<td>price&gt;9.00 and price&lt;9.90</td>
+<td>
+<p>&#x5982;&#x679C; price &#x662F; 9.80&#xFF0C;&#x5219;&#x8FD4;&#x56DE; true&#x3002;</p>
+<p>&#x5982;&#x679C; price &#x662F; 8.50&#xFF0C;&#x5219;&#x8FD4;&#x56DE; false&#x3002;</p>
+</td>
+</tr>
+<tr>
+<td>mod</td>
+<td>&#x8BA1;&#x7B97;&#x9664;&#x6CD5;&#x7684;&#x4F59;&#x6570;</td>
+<td>5 mod 2</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h1>XPath &#x5B9E;&#x4F8B;</h1>
+<h2>XML&#x5B9E;&#x4F8B;&#x6587;&#x6863;</h2>
+<p>&#x6211;&#x4EEC;&#x5C06;&#x5728;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A; XML &#x6587;&#x6863;&#xFF1A;</p>
+<h3>&quot;books.xml&quot; :</h3>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;?</span><span style="color: #ff00ff;">xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;</span><span style="color: #0000ff;">?&gt;</span>
+
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">bookstore</span><span style="color: #0000ff;">&gt;</span>
+
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">book </span><span style="color: #ff0000;">category</span><span style="color: #0000ff;">=&quot;COOKING&quot;</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">title </span><span style="color: #ff0000;">lang</span><span style="color: #0000ff;">=&quot;en&quot;</span><span style="color: #0000ff;">&gt;</span>Everyday Italian<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span>Giada De Laurentiis<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">year</span><span style="color: #0000ff;">&gt;</span>2005<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">year</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">price</span><span style="color: #0000ff;">&gt;</span>30.00<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">price</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">book</span><span style="color: #0000ff;">&gt;</span>
+
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">book </span><span style="color: #ff0000;">category</span><span style="color: #0000ff;">=&quot;CHILDREN&quot;</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">title </span><span style="color: #ff0000;">lang</span><span style="color: #0000ff;">=&quot;en&quot;</span><span style="color: #0000ff;">&gt;</span>Harry Potter<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span>J K. Rowling<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">year</span><span style="color: #0000ff;">&gt;</span>2005<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">year</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">price</span><span style="color: #0000ff;">&gt;</span>29.99<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">price</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">book</span><span style="color: #0000ff;">&gt;</span>
+
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">book </span><span style="color: #ff0000;">category</span><span style="color: #0000ff;">=&quot;WEB&quot;</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">title </span><span style="color: #ff0000;">lang</span><span style="color: #0000ff;">=&quot;en&quot;</span><span style="color: #0000ff;">&gt;</span>XQuery Kick Start<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span>James McGovern<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span>Per Bothner<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span>Kurt Cagle<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span>James Linn<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span>Vaidyanathan Nagarajan<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">year</span><span style="color: #0000ff;">&gt;</span>2003<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">year</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">price</span><span style="color: #0000ff;">&gt;</span>49.99<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">price</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">book</span><span style="color: #0000ff;">&gt;</span>
+
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">book </span><span style="color: #ff0000;">category</span><span style="color: #0000ff;">=&quot;WEB&quot;</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">title </span><span style="color: #ff0000;">lang</span><span style="color: #0000ff;">=&quot;en&quot;</span><span style="color: #0000ff;">&gt;</span>Learning XML<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span>Erik T. Ray<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">author</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">year</span><span style="color: #0000ff;">&gt;</span>2003<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">year</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">price</span><span style="color: #0000ff;">&gt;</span>39.95<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">price</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">book</span><span style="color: #0000ff;">&gt;</span>
+
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">bookstore</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<h2>&#x52A0;&#x8F7D; XML &#x6587;&#x6863;</h2>
+<p>&#x6240;&#x6709;&#x73B0;&#x4EE3;&#x6D4F;&#x89C8;&#x5668;&#x90FD;&#x652F;&#x6301;&#x4F7F;&#x7528; XMLHttpRequest &#x6765;&#x52A0;&#x8F7D; XML &#x6587;&#x6863;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x9488;&#x5BF9;&#x5927;&#x591A;&#x6570;&#x73B0;&#x4EE3;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x4EE3;&#x7801;&#xFF1A;</p>
+<div class="cnblogs_code">
+<pre>var xmlhttp=new XMLHttpRequest()</pre>
+</div>
+<p>&#x9488;&#x5BF9;&#x53E4;&#x8001;&#x7684;&#x5FAE;&#x8F6F;&#x6D4F;&#x89C8;&#x5668;&#xFF08;IE 5 &#x548C; 6&#xFF09;&#x7684;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre>var xmlhttp=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;)</pre>
+<h2>&#x9009;&#x53D6;&#x8282;&#x70B9;</h2>
+<p>&#x4E0D;&#x5E78;&#x7684;&#x662F;&#xFF0C;Internet Explorer &#x548C;&#x5176;&#x4ED6;&#x5904;&#x7406; XPath &#x7684;&#x65B9;&#x5F0F;&#x4E0D;&#x540C;&#x3002;</p>
+<p>&#x5728;&#x6211;&#x4EEC;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x5305;&#x542B;&#x9002;&#x7528;&#x4E8E;&#x5927;&#x591A;&#x6570;&#x4E3B;&#x6D41;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
+<p>Internet Explorer &#x4F7F;&#x7528; selectNodes() &#x65B9;&#x6CD5;&#x4ECE; XML &#x6587;&#x6863;&#x4E2D;&#x7684;&#x9009;&#x53D6;&#x8282;&#x70B9;&#xFF1A;</p>
+<div class="cnblogs_code">
+<pre>xmlDoc.selectNodes(xpath);</pre>
+</div>
+<p>Firefox&#x3001;Chrome&#x3001;Opera &#x4EE5;&#x53CA; Safari &#x4F7F;&#x7528; evaluate() &#x65B9;&#x6CD5;&#x4ECE; XML &#x6587;&#x6863;&#x4E2D;&#x9009;&#x53D6;&#x8282;&#x70B9;&#xFF1A;</p>
+<div class="cnblogs_code">
+<pre>xmlDoc.evaluate(xpath, xmlDoc, null, XPathResult.ANY_TYPE,null);</pre>
+</div>
+<h2>&#x9009;&#x53D6;&#x6240;&#x6709; title</h2>
+<p>&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x9009;&#x53D6;&#x6240;&#x6709; title &#x8282;&#x70B9;&#xFF1A;</p>
+<div class="cnblogs_code">
+<pre>/bookstore/book/title</pre>
+</div>
+<h2>&#x9009;&#x53D6;&#x7B2C;&#x4E00;&#x4E2A; book &#x7684; title</h2>
+<p>&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x9009;&#x53D6; bookstore &#x5143;&#x7D20;&#x4E0B;&#x9762;&#x7684;&#x7B2C;&#x4E00;&#x4E2A; book &#x8282;&#x70B9;&#x7684; title&#xFF1A;</p>
+<div class="cnblogs_code">
+<pre>/bookstore/book[1]/title</pre>
+</div>
+<p>&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#x3002;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x5728; IE &#x548C;&#x5176;&#x4ED6;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8F93;&#x51FA;&#x4E0D;&#x540C;&#x7684;&#xFFFD;&#xFFFD;&#xFFFD;&#x679C;&#x3002;</p>
+<p>IE5 &#x4EE5;&#x53CA;&#x66F4;&#x9AD8;&#x7248;&#x672C;&#x5C06; [0] &#x89C6;&#x4E3A;&#x7B2C;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x800C;&#x6839;&#x636E; W3C &#x7684;&#x6807;&#x51C6;&#xFF0C;&#x5E94;&#x8BE5;&#x662F; [1]&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x89E3;&#x51B3; IE5+ &#x4E2D; [0] &#x548C; [1] &#x7684;&#x95EE;&#x9898;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A; XPath &#x8BBE;&#x7F6E;&#x8BED;&#x8A00;&#x9009;&#x62E9;&#xFF08;SelectionLanguage&#xFF09;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x9009;&#x53D6; bookstore &#x5143;&#x7D20;&#x4E0B;&#x9762;&#x7684;&#x7B2C;&#x4E00;&#x4E2A; book &#x8282;&#x70B9;&#x7684; title&#xFF1A;</p>
+<div class="cnblogs_code">
+<pre><span style="color: #000000;">xml.setProperty(&quot;SelectionLanguage&quot;,&quot;XPath&quot;);
+xml.selectNodes(&quot;/bookstore/book[1]/title&quot;);</span></pre>
+</div>
+<h2>&#x9009;&#x53D6;&#x6240;&#x6709;&#x4EF7;&#x683C;</h2>
+<p>&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x9009;&#x53D6; price &#x8282;&#x70B9;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x6587;&#x672C;&#xFF1A;</p>
+<div class="cnblogs_code">
+<pre>/bookstore/book/price/text()</pre>
+</div>
+<h2>&#x9009;&#x53D6;&#x4EF7;&#x683C;&#x9AD8;&#x4E8E; 35 &#x7684; price &#x8282;&#x70B9;</h2>
+<p>&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x9009;&#x53D6;&#x4EF7;&#x683C;&#x9AD8;&#x4E8E; 35 &#x7684;&#x6240;&#x6709; price &#x8282;&#x70B9;&#xFF1A;</p>
+<div class="cnblogs_code">
+<pre>/bookstore/book[price&gt;35]/price</pre>
+</div>
+<h2>&#x9009;&#x53D6;&#x4EF7;&#x683C;&#x9AD8;&#x4E8E; 35 &#x7684; title &#x8282;&#x70B9;</h2>
+<p>&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x9009;&#x53D6;&#x4EF7;&#x683C;&#x9AD8;&#x4E8E; 35 &#x7684;&#x6240;&#x6709; title &#x8282;&#x70B9;&#xFF1A;</p>
+<div class="cnblogs_code">
+<pre>/bookstore/book[price&gt;35]/title</pre>
+</div>
+<p>&#xA0;</p>
+<p>&#xA0;</p>
+<pre><br><br></pre>
